@@ -1,0 +1,4 @@
+label: 'Overwolf CLI'
+customProps:
+  category:
+    id: 'utilities'

@@ -1,0 +1,16 @@
+.submit-account-buttons {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn-primary {
+    margin-bottom: 24px;
+    color: var(--color-text-cta-ow);
+
+    &:hover {
+      color: var(--color-text-cta-ow);
+    }
+  }
+
+}

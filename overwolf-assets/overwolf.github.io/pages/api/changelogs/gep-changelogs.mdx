@@ -1,0 +1,5479 @@
+---
+id: gep-changelogs
+image: "/img/embed/changelogs.jpg"
+title: "GEP Changelogs"
+sidebar_position: 1
+showLastUpdateAuthor: false
+showLastUpdateTime: false
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/getting-started/changelog/ow-changelog?game-tab=gep-changelog" />
+
+<details open>
+<summary>Version 259.2.1</summary>
+
+* Diablo 2
+	* Reset player_stats on match_end
+
+* Fortnite
+	* Partially fix the game events
+	* List of events that are still in progress
+		* `match_id`
+		* `ping`
+		* `compass`
+* The Finals
+	* Fix `scene` `lobby`
+
+</details>
+
+
+<details open>
+<summary>Version 259.2.0</summary>
+
+* TFT
+	* New info update:
+	* We've split between augments and items and created a new info update called `item_select` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/teamfight-tactics#match_info)
+	* Fix an issue in items, `round_start` and `battle_start`
+
+</details>
+
+
+<details open>
+<summary>Version 259.1.2</summary>
+
+* Fortnite
+	* Fix `roster` and `mode`
+	* List of events that are still in progress
+		* `match_id`
+		* `team`
+		* `creative_map`
+		* `killed`
+		* `knockout`
+		* `death`
+		* `revived`
+		* `ping`
+		* `compass`
+
+</details>
+
+
+<details open>
+<summary>Version 259.1.1</summary>
+
+* Fortnite
+	* Partially fix the game events
+	* List of events that are still in progress
+		* `roster`
+		* `match_id`
+		* `mode`
+		* `team`
+		* `creative_map`
+		* `killed`
+		* `knockout`
+		* `death`
+		* `revived`
+		* `ping`
+		* `compass`
+		
+</details>
+
+
+<details open>
+<summary>Version 259.1.0</summary>
+
+* The First Descendant
+	* New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/the-first-descendant)
+
+* Stormgate
+	* Fix game events
+
+* Diablo 2
+	* Add reset to info-updates on `match_end`
+
+</details>
+
+
+<details open>
+<summary>Version 259.0.2</summary>
+
+* PUBG
+    * Partially fix the game events
+    * List of events that are still in progress
+        * `phase` (partial)
+        * `revived`
+        * `knockout`
+        * `killer`
+        * `death`
+        * `victimname`
+
+* LOL Arena
+    * Adjust the game events
+
+</details>
+
+
+<details open>
+<summary>Version 259.0.1</summary>
+
+* TFT
+    * Adjust the game events based on PBE
+
+</details>
+
+
+<details open>
+<summary>Version 259.0.0</summary>
+
+* LOL + Arena
+    * Adjust the game events based on PBE
+
+* Roblox
+    * Fix an issue with `setRequiredFeatures`
+    * Add new info-update - `universe_id` more information [here](https://overwolf.github.io/api/live-game-data/supported-games/roblox#match_info)
+
+</details>
+
+
+<details open>
+<summary>Version 258.1.3</summary>
+
+* Apex
+    * Fix tabs issue
+
+*   PUBG
+    * Partially fix the game events
+    * List of events that are still in progress
+        * `me`
+        * `health`
+        * `phase` (partial)
+        * `revived`
+        * `killer`
+        * `victimName`
+        * `knockedout`
+        * `knockout`
+
+</details>
+
+
+<details open>
+<summary>Version 258.1.1</summary>
+
+* Apex
+    * Fix game events
+    * `roster` info-update was modified, `platform_sw` was removed and it's not used anymore - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/apex-legends#roster)
+
+* Fortnite
+    * Fix game events
+
+* Diablo 4
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 258.1.0</summary>
+
+* WOW
+    * Add DLL with Electron support
+
+* TFT
+    * Add new parameter `tag_line` to the following events:
+        * `opponents`
+        * `roster`
+        * `round_outcome`
+
+* Overwatch 2
+    * 2 new events: more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#events)
+        * `respawn`
+        * `revive` 
+    * Fix an issue when the enemy hero roster was available too early
+    * Fix an issue with the `roster`
+
+* Fortnite
+    * 2 new events: more information [here](https://overwolf.github.io/api/live-game-data/supported-games/fortnite#info-updates-3)
+        * `message_feed`
+        * `match_stats`
+
+* Minecraft
+    * Add `biome` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/minecraft#match_info)
+    * Fixed an issue when Minecraft ran on OW and Electron in parallel
+    * Fix the player location when you are on a boat or a horse
+
+</details>
+
+
+<details open>
+<summary>Version 258.0.2</summary>
+
+* Halo
+    * Fix game events
+
+* MTGA
+    * Fix game events
+
+* Apex
+    * Fix `roster` issue on Overwolf relaunch
+
+</details>
+
+
+<details open>
+<summary>Version 258.0.1</summary>
+
+* LOL Arena
+    * Adjust the game events to the latest patch
+
+* Valorant
+    * Adjust the game events to the latest patch
+
+* FFXIV
+    * Plugin with electron support
+
+</details>
+
+
+<details open>
+<summary>Version 258.0.0</summary>
+
+* TFT
+    * Adjust the game events to the latest patch
+    * Fix an issue with `rank` and `health` when the local player was not recognized correctly
+
+* Valorant
+    * Add new info-update `match_score` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#match_score-note)
+
+</details>
+
+
+<details open>
+<summary>Version 257.4.3</summary>
+
+* Dark and Darker
+    * New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/dark-and-darker)
+        * `match_start`
+        * `match_end`
+        * `death`
+
+</details>
+
+
+<details open>
+<summary>Version 257.3.3</summary>
+
+* POE
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 257.3.2</summary>
+
+* LOL swarm
+    * Fix champion names - remove Strawberry_
+
+* R6
+    * Fix phase event
+
+</details>
+
+
+<details open>
+<summary>Version 257.3.1</summary>
+
+* PUBG
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 257.3.0</summary>
+
+* Valorant
+    * New info update - server more information here
+    * Fix `shield` issue
+
+* Roblox
+    * New game events - more information here
+        * `match_start`
+        * `match_end`
+        * `game_id`
+        * `user_id`
+        * `record_start`
+        * `record_end`
+
+* LOL Arena
+    *Fix `damage` in info-updates
+
+</details>
+
+
+<details open>
+<summary>Version 257.2.1</summary>
+
+* POE
+    * Fix game evets
+
+</details>
+
+
+<details open>
+<summary>Version 257.2.0</summary>
+
+* LOL - Swarm
+    * Adjust the game events in swarm
+
+* Valorant
+    * Fix `coach` in `observer` mode
+
+</details>
+
+
+<details open>
+<summary>Version 257.1.1</summary>
+
+* Genshin Impact
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 257.1.0</summary>
+
+* LOL
+    * Fix `team_frames` info-update
+
+* LOL Arena
+    * Fix the game events
+
+* Valorant
+    * Fix `game_mode` info-update
+    * Add new info-update `observing`
+    * As an observer or a coach, you will get the observed player's name - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#observing-note)
+
+* PUBG
+    *Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 257.0.1</summary>
+
+* LOL + TFT + Arena
+    * Fix the game events based on PBE
+
+* Xdefiant
+    * Fix `death` and `elimination` events
+
+</details>
+
+
+<details open>
+<summary>Version 257.0.0</summary>
+
+* Fortnite
+    *Fix `death` event in creative mode
+
+</details>
+
+
+<details open>
+<summary>Version 256.3.0</summary>
+
+* MTGA
+    * Fix `draft` event
+
+* R6
+    * Fix `scene` event
+
+* Valorant
+    * Added support for `scoreboard` info in observer and coach modes
+    * Added new `spike` parameter to  `scoreboard` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#scoreboard-note)
+    * Added new `team` parameter to  `scoreboard` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#scoreboard-note)
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 256.2.0</summary>
+
+* Xdefiant
+    * Fix `scene` event
+
+* Final Fantasy XIV
+    * Improve plugin stability
+
+* Overwatch2
+    * Add new game event `game_queue_type` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#game_queue_type-note)
+
+</details>
+
+
+<details open>
+<summary>Version 256.1.2</summary>
+
+* PUBG
+    * Fix events
+
+* Halo Infinite
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 256.1.1</summary>
+
+* Wuthering Waves
+    * New game events support - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/wuthering_waves)
+        * Scenes - lobby/ingame/death
+        * Match start / end
+        * Death
+        * Respawn
+
+* COD
+    * Fix an issue when moving from MW3 to WZ2
+
+* Final Fantasy XIV
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 256.0.0</summary>
+
+* Apex
+    * Fixed duplicate `death` and `respawn` events
+    * Add support for `Quads` game mode
+
+* R6
+    * Add new info-update `steam_id` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rainbow-six-siege#game_info)
+
+* Helldivers 2
+    * Fix `death` event
+
+* Fortnite
+    * Fix `matchID` event
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.8</summary>
+
+* Apex
+    * Fix Events
+    * Known issues (in progress):
+        * The platform values for steam in the `roster` are now `"platform_hw":7,"platform_sw":7"` instead of `"platform_hw":2,"platform_sw":7"`
+        * Event `respawn` is triggered twice
+        * Event `death` is triggered again after `respawn`
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.7</summary>
+
+* TFT/LOL/Arena
+    * Fix `teams` info-update
+
+* Minecraft
+    * Fix an issue with the latest Forge version
+
+* PUBG
+    * Fix Events
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.6</summary>
+
+* Genshin Impact
+    * 2 New events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/genshin-impact#match_info)
+        * `dungeon_start`
+        * `dungeon_end`
+
+* TFT
+    * Adjust the game events based on PBE with backward compatibility
+    * `teams` info-update is still in maintenance
+
+* Diablo 4
+    * Reset `name` info-update on `match_end`
+
+* Honkai Start Rail
+    * Fix `battle_start` event
+
+</details>
+
+
+
+<details open>
+<summary>Version 255.0.5</summary>
+
+* The Finals
+ *  Fix summary event
+
+* Overwatch 2
+    * Fix the game events
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.4</summary>
+
+* POE
+    * Fix the game events
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.3</summary>
+
+* PUBG
+    * Fix the game events
+
+* Hearthstone
+    * Fix the game events
+* Dota 2
+    * Clear `bans`, `draft`, and `players` list at the end of the match
+    * Fix `pickConfirmed` in Turbo mode
+
+* Apex
+    * Fix the re-queue issue and `match_end` event
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.2</summary>
+
+* R6
+    * Fix `operator` in `roster`
+* Apex
+    * Add info-update `team_damage_dealt` - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/apex-legends#team_damage_dealt-note)
+
+</details>
+
+
+<details open>
+<summary>Version 255.0.1</summary>
+
+* The finals
+    * Fix events
+
+* Minecraft
+    * Add support for MC version 1.21
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.6</summary>
+
+* Fortnite
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.5</summary>
+
+* Lol Arena
+    * Fix events
+
+* PUBG
+    * Fix events
+
+* CS2
+    * Fix `kill_feed` event
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.4</summary>
+
+* Valorant
+    * Fix `shop` event
+    * Add new map Abyss - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#map-note)
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.3</summary>
+
+* R6
+    * Fix events
+    * `operator` in `roster` is still down
+
+* Diablo 4
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.2</summary>
+
+* Valorant
+    * Fix an issue with game events when Overwolf relaunches
+
+* TFT
+    * Fix the game events based on PBE with backward compatibility
+
+* LOL
+    * Fix the game events based on PBE with backward compatibility
+
+* LOL Arena
+    * Fix the game events based on PBE with backward compatibility
+
+* Starfield
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 254.1.0</summary>
+
+* XDefiant
+    * New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/xdefiant)
+
+* Genshin Impact
+    * Fix events
+
+* Overwatch 2
+    * Fix `game_type` reset on `match_end` 
+
+</details>
+
+
+<details open>
+<summary>Version 254.0.1</summary>
+
+* New World
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 254.0.0</summary>
+
+* Helldivers 2
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 253.2.4</summary>
+
+* TFT
+    * Fix the round type detection
+
+* Valorant
+    * Fix `ability` and `game_mode` events
+
+</details>
+
+
+<details open>
+<summary>Version 253.2.3</summary>
+
+* TFT
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 253.2.2</summary>
+
+* PUBG
+    * Fix game events
+
+* Helldivers 2
+    * Fix death event
+
+</details>
+
+
+<details open>
+<summary>Version 253.2.1</summary>
+
+* Honkai Star Rail - new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/honkai-star-rail)
+    * `scene`
+    * `match_start`
+    * `match_end`
+    * `battle_start`
+    * `battle_end`
+    * `match_outcome` - victory/defeat
+
+* Hades 2 - new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/hades2)
+    * `scene`
+    * `match_start`
+    * `match_end`
+    * `death`
+
+* Manor Lords - new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/manor-lords)
+    * `scene`
+    * `match_start`
+    * `match_end`
+
+* CS2
+    * new game event - mm_state more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#mm_state-note)
+
+* LOL Arena
+    * Fix game events with backward compatibility
+
+</details>
+
+
+<details open>
+<summary>Version 253.1.1</summary>
+
+* Lost Ark
+    * Fix game events
+
+* Diablo 4
+    * Improved stability
+
+</details>
+
+
+<details open>
+<summary>Version 253.1.1</summary>
+
+* Lost Ark
+    * Fix game events
+
+* Diablo 4
+    * Improved stability
+
+</details>
+
+
+<details open>
+<summary>Version 253.1.0</summary>
+
+* LOL Arena
+    * Add 2 new events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends-arena#events-1)
+        * `battle_start`
+        * `battle_end`
+
+* PUBG
+    * Fix events
+
+* Rocket League
+    * Add 2 new events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#events-1)
+        * `surrender` with the information about the team number
+        * `overtime` when the game continues to overtime
+
+</details>
+
+
+<details open>
+<summary>Version 253.0.0</summary>
+
+* Valorant
+    * Fix an issue with `shield` in `scoreboard` info-update
+
+* Fortnite
+    * Fix an issue with `mode` info-update
+
+* Diablo 4
+    *Fix `location` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 252.4.0</summary>
+
+* Content Warning
+    * New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/content-warning)
+
+</details>
+
+
+<details open>
+<summary>Version 252.3.2</summary>
+
+* New World
+    * Fix the `location` event
+
+* OW2
+    * Fix game events
+
+* Valorant
+    * Fix issues and improve stability
+
+</details>
+
+
+<details open>
+<summary>Version 252.3.1</summary>
+
+* PUBG
+    * Fix game events
+
+* Diablo 4
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 252.3.0</summary>
+
+* Rocket League
+    * Add new game events
+        * Shuffle mode in training packs - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#training_shuffle_mode-note)
+        * Add round length to training pack under `training_round` info-update - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#training_round-note)
+        * Add `players_boost` indication for all the teammates - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#players_boost-note)
+
+* LOL
+    * Fix `stack` info-update based on PBE with backward compatibility
+
+* LOL arena
+    * Fix `round_number` and `match_outcome` info-updates based on PBE with backward compatibility
+
+</details>
+
+
+<details open>
+<summary>Version 252.2.2</summary>
+
+* R6
+    * Fix `phase` and `score` events
+
+</details>
+
+
+<details open>
+<summary>Version 252.2.1</summary>
+
+* PUBG
+    * Fix events
+
+* Apex
+    * Fix events
+    * Add support for re-queue
+
+</details>
+
+
+<details open>
+<summary>Version 252.2.0</summary>
+
+* CS2
+    * Fix `kill_feed` event
+
+* Vlheim
+    * Game deprecation
+
+* Overwatch2
+    * New events - more information here
+        * `round_start`
+        * `round_end`
+        * `game_type`
+    * Fix the hero name and role for the opponent team in the `roster`
+
+* MTGA
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 252.1.0</summary>
+
+* Fortnite
+    * Fix `inventory` info-update
+
+* Final Fantasy XIV
+    * Fix `contact_xx` info-update
+
+* TFT
+    * Add support for all DX version
+    * Fix a minor issue in the carousel
+
+* LOL Arena
+    * `teams` info-updated is no longer supported in the new arena version and will be deprecated
+    * New info-update `arena_teams` instead of `teams` - see more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends-arena#teams)
+
+</details>
+
+
+<details open>
+<summary>Version 252.0.0</summary>
+
+* Fortnite
+    * Fix an issue with matchId info-update
+
+</details>
+
+
+<details open>
+<summary>Version 251.1.2</summary>
+
+* Valorant
+    * Fix `team` event each time there is a switch between attacker and defender
+
+* LOL Arena
+    * Fix `match_outcome` event
+
+</details>
+
+
+<details open>
+<summary>Version 251.1.1</summary>
+
+* Halo
+    * Fix events
+
+* Minecraft
+    * Add support for version 1.20.6
+
+</details>
+
+
+<details open>
+<summary>Version 251.1.0</summary>
+
+* TFT
+    * Fix events with backward compatibility
+
+* LOL Arena
+    * Fix events based on PBE
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 251.0.2</summary>
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 251.0.1</summary>
+
+* Genshin Impact
+    * Fix events
+
+* Minecraft
+    * Fix `match_start` event in forge V43.3
+
+* Fortnite
+    * Fix `matchId` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 251.0.0</summary>
+
+* Valorant
+    * Fix switch sides in different game modes issue
+
+* Sons Of The Forest
+    * Fix `location` event
+
+</details>
+
+
+<details open>
+<summary>Version 250.3.1</summary>
+
+* Dota 2
+    * Fix events
+
+* Fortnite
+    * Disable `matchId`
+    * Fix `revive` event
+
+</details>
+
+
+<details open>
+<summary>Version 250.3.0</summary>
+
+* Valorant
+    * Fixed `roster` and `scoreboard` in deathmatch
+    * Fix `game_mode` info-update
+
+* Overwatch2
+    * Fix `match_outcome` info-update
+    * Add support for a new hero - VENTURE
+
+</details>
+
+
+<details open>
+<summary>Version 250.2.0</summary>
+
+* Fortnite
+    * Fixed killed and knockout
+
+* Overwatch2
+    * Add a new info-update `match_outcome` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#match_outcome-note)
+    * possible values `victory` and `defeat`
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.5</summary>
+
+* LOL
+    * Fix `usedAbility` in PBE with backward compatibility to the public version
+
+* TFT
+    * Fix events in PBE with backward compatibility to the public version
+    * Update the `round_type` names
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.4</summary>
+
+* PUBG
+    * Fix events
+
+* Fortnite
+    * Fixed `killed` and `knockout`
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.3</summary>
+
+* PUBG
+    * Fix `victim_name`, `knockout`, and `map`
+
+* TFT
+    * Fixed an issue in `gameplay`
+
+* CS2
+    * Fix `kill_feed` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.2</summary>
+
+* MW3 - WZ2
+    * Fixed events
+
+* R6
+    * Fixed events
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.1</summary>
+
+* PUBG
+    * Fixed events
+    * `victim_name`, `knockout`, and `map` are still disabled
+
+* TFT
+    * Fixed an issue in `gameplay`
+
+</details>
+
+
+<details open>
+<summary>Version 250.1.0</summary>
+
+* TFT
+    * Fix an issue in `gameplay`
+
+* Valorant
+    * Add a new event - `escalation_stage` - more info [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#escalation_stage-note)
+
+* Dota
+    * Add 2 new events - more info [here](https://overwolf.github.io/api/live-game-data/supported-games/dota-2#damage)
+        * `damage_dealt_tower`
+        * `damage_dealt_hero`
+
+</details>
+
+
+<details open>
+<summary>Version 249.2.4</summary>
+
+* Tarkov
+    * Fix `phase` event
+
+</details>
+
+
+<details open>
+<summary>Version 249.2.3</summary>
+
+* Tarkov
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 249.2.2</summary>
+
+* Rocket League
+    * Fixed `training_pack` issues
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 249.2.1</summary>
+
+* R6
+    * Added `player_id` to `roster`
+    * Added `suffix` to `roster`
+    * Fixed `is_anonymous`
+
+* TFT
+    * Fixed minor issue
+
+* New World
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 249.1.3</summary>
+
+* Apex
+    * Fix minor issue
+
+* Minecraft
+    * Fix stats event
+
+* TFT
+    * Fix events in PBE with backward compatibility to the public version
+    * Update the round types names
+    * Add `native_name` to round type
+
+</details>
+
+
+<details open>
+<summary>Version 249.1.1</summary>
+
+* POE
+    * Fix events
+
+* R6
+    * Fixed `roster` issue
+
+</details>
+
+
+<details open>
+<summary>Version 249.1.0</summary>
+
+* Helldivers 2 - More information [here](https://overwolf.github.io/api/live-game-data/supported-games/helldivers-2)
+    * New game events:
+        * `match_start`
+        * `match_end`
+        * `scene`
+        * `death`
+    * Status page [here](https://overwolf.github.io/status/helldivers-2)
+
+* Overwatch 2
+    * Add new `roster` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#roster)
+    * The parameters `hero_name` and `hero_role` will be available for the local player team only We will add them to the other team in the next GEP release
+
+* Warframe
+    * Fix events
+
+* Fortnite
+    * Fix an issue with `death` event by disabling `killer` event in Lego mode
+
+</details>
+
+
+<details open>
+<summary>Version 249.0.6</summary>
+
+* Diablo 4
+    * Fix events
+
+* PUBG
+    * Fix events
+
+* Apex
+    * Fix events
+    * Add support for game mode `Lockdown`
+
+</details>
+
+
+<details open>
+<summary>Version 249.0.5</summary>
+
+* Starfield
+    * Fix `location` and `planet_name`
+
+* CS2
+    * Fix `assister` in `kill_feed`
+
+* The Finals
+    * Fix scene detection
+    * Add scene `summary` at the end of the game (not supported in tournaments)
+
+</details>
+
+
+<details open>
+<summary>Version 249.0.2</summary>
+
+* TFT
+    * Fix an issue in the carousel
+
+</details>
+
+
+<details open>
+<summary>Version 249.0.0</summary>
+
+* Lost Ark
+    * Fix `mob_details` event
+
+</details>
+
+
+<details open>
+<summary>Version 248.0.1</summary>
+
+* PUBG
+    * Fix game events
+
+* Halo infinite
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 248.0.0</summary>
+
+* LOL + TFT
+    * Fix game events based on PBE with backward compatibility
+
+* Apex
+    * Fix an issue with 'knockdown' event
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.10</summary>
+
+* PUBG
+    * Fix game Events
+    * `knockout` event is disabled
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.9</summary>
+
+* Apex
+    * Fix `tabs` event
+
+* Genshin Impact
+    * Fix `playerId` event
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.8</summary>
+
+* Valorant
+    * Fix game events
+
+* Genshin Impact
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.7</summary>
+
+* Valorant
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.6</summary>
+
+* Diablo 4
+    * Fix game events
+
+* POE
+    * Fix game events
+
+* R6
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.5</summary>
+
+* Valorant
+    * Disable the support for `roster` in escalation mode
+
+* Fortnite
+    * Fixed game events in Lego and Rocket racing modes
+
+* Rocket League
+    * Fix game events when the game is already running
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.4</summary>
+
+* Valorant
+    * Fix an issue with game events
+
+* Apex
+    * Fix an issue with `tabs`
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.3</summary>
+
+* Fortnite
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.2</summary>
+
+* TFT
+    * Fix stability issue
+
+* Valorant
+    * Fix `shop` event
+
+* LOL
+    * Fix `jungle_camps` issue
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.1</summary>
+
+* Valorant
+    * Fix game events
+    * `shop` event is disabled
+
+* TFT
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 247.2.0</summary>
+
+* Games and events deprecation
+    * Leap
+    * Dota underlords
+    * Hunt showdown
+    * WOW - `addons_xx` event
+
+* CS2
+    * Fix an issue with `steam_id`
+
+* The Finals
+    * Fix an issue with `steam_id`
+
+</details>
+
+
+<details open>
+<summary>Version 247.1.2</summary>
+
+* Apex
+    * Fix an issue in `phase`
+
+</details>
+
+
+<details open>
+<summary>Version 247.1.1</summary>
+
+* R6
+    * Fix `roster` issue
+
+* Apex
+    * Fix `kill_feed` and tabs issues
+
+</details>
+
+
+<details open>
+<summary>Version 247.1.0</summary>
+
+* The finals
+    * Add support for new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/the-finals)
+        * scene
+        * match_start
+        * match_end
+        * elimination
+
+</details>
+
+
+<details open>
+<summary>Version 247.0.0</summary>
+
+* Sons Of The Forest
+    * Fix game events
+
+* R6
+    * Add `operator` to the `roster`
+
+* Baldur's Gate 3
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 246.2.4</summary>
+
+* TFT
+    * Fix issues
+
+* Fortnite
+    * Fix game events
+        * `inventory`
+        * `accuracy`
+        * `total_shots`
+        * `hit`
+        * `creative_map
+
+</details>
+
+
+<details open>
+<summary>Version 246.2.2</summary>
+
+* TFT
+    * Fix minor issues
+
+</details>
+
+
+<details open>
+<summary>Version 246.2.1</summary>
+
+* LOL / TFT
+    * Fix game events
+
+* Apex - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/apex-legends)
+    * `Kill` and `assist` events are fixed but will not send the victim's name anymore, instead, we will send the total amount of kills / assists for the local player
+    * `knockdown` is fixed but the event will not send the victim's name anymore
+    * `death` event was fixed
+    * Update new game mode and map names
+    * Fix `tabs` info-update
+
+* Baldur's Gate 3
+    * Fix game events
+
+* Fortnite
+    * Fix game events
+    * Some events will stay disabled in this version:
+        * `inventory`
+        * `accuracy`
+        * `total_shots`
+        * `hit`
+        * `creative_map`
+
+</details>
+
+
+<details open>
+<summary>Version 246.1.3</summary>
+
+* BG3
+    * Fix location events
+
+</details>
+
+
+<details open>
+<summary>Version 246.1.2</summary>
+
+* R6
+    * Fix game events
+
+* Minecraft
+    * Fix game events in Minecraft versions 1.20.3/4
+    * Info-updates stats are disabled
+
+</details>
+
+
+<details open>
+<summary>Version 246.1.1</summary>
+
+* R6
+    * Recover `killer` event
+
+* Halo
+    * Fix game events
+
+</details>
+
+
+<details open>
+<summary>Version 246.1.0</summary>
+
+* R6
+    * Partially recover `roster` info-update
+
+* Apex
+    * Fix game events
+    * `weapons` and `inUse` info-updates are not working
+
+* Rocket League
+    * Fix an issue in `action_points` info-update
+
+* Diablo 4
+    * Fix game events
+
+* Fortnite
+    * Fix game events in creative maps
+
+</details>
+
+
+<details open>
+<summary>Version 245.2.5</summary>
+
+* Dota
+    * Fix an issue in `roster` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 245.2.4</summary>
+
+* Fortnite
+    * Fixed events
+    * Fix the event detection in the second match in creative maps
+
+* CS2
+    * Fixed events
+
+* PUBG
+    * Fixed events
+
+* MTGA
+    * Fix the `inventory` info-update
+
+* Overwatch 2
+    * Fix FPS issue
+
+</details>
+
+
+<details open>
+<summary>Version 245.2.2</summary>
+
+* TFT
+    * Fix the events on PBE with backward compatibility to the public version
+
+* R6
+    * Fix `phase` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 245.2.1</summary>
+
+* Diablo 4
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 245.2.0</summary>
+
+* Palworld
+    * Added location  info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/palworld#location-note)
+
+* Halo
+    * Fixed events
+
+* PUBG
+    * Fixed events
+
+* Genshin Impact
+    * Fixed events
+
+* Valorant 
+    * Fixed minor stability issue
+
+</details>
+
+
+<details open>
+<summary>Version 245.1.2</summary>
+
+* R6
+    * Add `players_list_log`  info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rainbow-six-siege#players_list_log-notes)
+    * Fix `matchId` info-update
+
+* MTGA
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 245.1.1</summary>
+
+* R6
+    * Fix events
+    * Below is a list of disabled events:
+        * Roster
+        * Killer
+        * Health
+        * Player Score
+        * Round number
+
+* Diablo 4
+    * Fix an issue in the `XP` event
+
+</details>
+
+
+<details open>
+<summary>Version 245.1.0</summary>
+
+* Palworld
+    * New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/palworld)
+    * Below is a list of supported events:
+        * `match_start`
+        * `match_end`
+        * `death`
+        * `knockout`
+        * `revive`
+        * `respawn`
+        * `scene`
+
+* MW3
+    * Fix `victory` event in EN
+
+</details>
+
+
+<details open>
+<summary>Version 245.0.0</summary>
+
+* Fortnite
+    * Fix `matchId` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 244.3.2</summary>
+
+* Diablo 4
+    * Fix events
+
+* LOL
+    * Fix an issue in `jungle_camps` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 244.3.1</summary>
+
+* Valorant
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 244.3.0</summary>
+
+* LOL
+    * Fixed events for PBE with backward compatibility - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends#jungle_camps)
+    * In the jungle_camps info-update we will no longer send the jungle_camp_id but instead the actual name of the camp
+    * The first key is changed to jungle_camp_0 instead of jungle_camp_1 as before
+
+* Valorant
+    * Add support for `roster` in escalation mode
+
+* WOT
+    * Fix log detection in standalone and Steam game
+
+* The finals
+    * New game events `steam_id` more information [here](https://overwolf.github.io/api/live-game-data/supported-games/the-finals)
+    * Status page [here](https://overwolf.github.io/status/the-finals)
+
+</details>
+
+
+<details open>
+<summary>Version 244.2.0</summary>
+
+* COD - MW3 + WZ2
+    * Fix events detection
+* Lethal Company
+    * New game events based on the new OCR solution
+    * Events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/lethal-company)
+        * Match start/end
+        * Scene (lobby / ingame)
+        * death
+        * respawn
+    * Status page [here](https://overwolf.github.io/status/lethal-company)
+
+</details>
+
+
+<details open>
+<summary>Version 244.0.0</summary>
+
+* PUBG
+    * Fix events
+* LOL
+    * Fix `scuttle` in `jungle_camp` 18 and 19
+* APEX
+    * Fix armor in `damage` event
+
+</details>
+
+
+<details open>
+<summary>Version 243.0.3</summary>
+
+* Lost ark
+    * Fix `mob_details` event
+* Genshin Impact
+    * Fix `match_start` event
+    * Add the selected character name to the `character_switch` event
+* APEX
+    * Fix `damage` event
+    * Fix an issue in `roster` info-update
+* PUBG
+    * Fix `knockout` and `victim_name`
+
+</details>
+
+
+<details open>
+<summary>Version 243.0.2</summary>
+
+* WOW
+    * Fix events
+* Apex
+    * Fix events
+    * Add new mode name
+
+</details>
+
+
+<details open>
+<summary>Version 243.0.1</summary>
+
+* LOL
+    * Fix `jungle_camps` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 243.0.0</summary>
+
+* Baldur's Gate 3
+    * Fix `main_map` and `sub_map` reset on `match_end`
+* Overwatch 2
+    * Add `battle_tag` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#battle_tag-note)
+* PUBG
+    * Fix `health` and `knockout` events
+
+</details>
+
+
+<details open>
+<summary>Version 242.3.1</summary>
+
+* Tarkov
+    * Fix events
+* LOL
+    * Fix an issue with `team_frames` event
+* Genshin Impact
+    * Fix an issue with `character_switch` event
+
+</details>
+
+
+<details open>
+<summary>Version 242.2.1</summary>
+
+* Overwatch 2
+    * Add support for DLC invasion
+        * `match_start`
+        * `match_end`
+
+* Genshin Impact
+    * Fix events
+
+* Warframe
+    * Fix `inventory` issues
+
+</details>
+
+
+<details open>
+<summary>Version 242.1.1</summary>
+
+* Valorant
+    * Fix an issue in `roster` in deathmatch
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 242.1.0</summary>
+
+* R6
+    * Fix events
+
+* TFT
+    * Fix events in PBE with backward compatibility to the prod version
+    * Fix `shop_pieces` wrong values when the player is leaving a match in the middle
+
+* LOL
+    * Fix `summoner_info` events
+        * `name`
+        * `tier`
+        * `division`
+        * `queue`
+        * `region`
+        * `accountId`
+        * `level`
+
+* Valorant
+    * Fix `scoreboard` and `roster` party member names
+
+* Genshin Impact
+    * New game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/genshin-impact)
+        * `player_id`
+        * `character_name`
+        * `character_switch`
+        * `match_start`
+        * `match_end`
+
+</details>
+
+
+<details open>
+<summary>Version 241.5.1</summary>
+
+* POE
+    * Fix events
+
+* R6
+    * Fix events
+    * Add new map `ARCTIC WORKSHOP`
+
+</details>
+
+
+<details open>
+<summary>Version 241.5.0</summary>
+
+* New World
+    * Fix `location` info-update
+
+* Apex
+    * Add 2 new info-updates - new information [here](https://overwolf.github.io/api/live-game-data/supported-games/apex-legends#match_info)
+        * `mode_name`
+        * `map_name`
+
+* COD - WZ2
+    * Fix wrong in-game detection during warmup
+
+</details>
+
+
+<details open>
+<summary>Version 241.4.1</summary>
+
+* TFT
+    * Fix `picked_augment` event
+
+* PUBG
+    * Fix events
+
+* COD - Warzone2
+    * Fix events detection
+
+* Baldur's Gate 3
+    * Add new events: more information [here](https://overwolf.github.io/api/live-game-data/supported-games/baldurs-gate-3#location)
+        * `location_players`
+        * `location_camera`
+        * `main_map`
+        * `sub_map`
+
+</details>
+
+
+<details open>
+<summary>Version 241.3.0</summary>
+
+* Fortnite
+    * Add support for new maps
+        * Lego
+        * Rocket Racing
+
+</details>
+
+
+<details open>
+<summary>Version 241.2.4</summary>
+
+* POE
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 241.2.3</summary>
+
+* R6
+    * Fix events
+
+* COD - WZ
+    * Fix `victory` event detection
+
+</details>
+
+
+<details open>
+<summary>Version 241.2.2</summary>
+
+* R6
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 241.2.1</summary>
+
+* Warzone2
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 241.2.0</summary>
+
+* R6
+    * Fix events
+    * Add support for `LAIR` map
+* MTGA
+    * Fix events
+* Apex
+    * Fix `knockout` event in Chinese
+
+</details>
+
+
+<details open>
+<summary>Version 241.1.0</summary>
+
+* LOL
+    * Fix `chat` info-update
+* Valorant
+    * Add a new event `shop` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#shop-note)
+    * Fix an issue in `scoreboard` info-update
+    * Add support to the new map `Drift`
+* Rocket League
+    * Fix events
+* Halo
+    * Fix events
+* PUBG
+    * Fix events
+    * Add support for new map `Rondo`
+
+</details>
+
+
+<details open>
+<summary>Version 241.0.0</summary>
+
+* Baldurs Gate 3
+    * Fix `scene` info-update
+* CS2
+    * Fix an issue in `kill_feed` info_update
+
+</details>
+
+
+<details open>
+<summary>Version 240.3.1</summary>
+
+* LOL
+    * Add `team_frames` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends#team_frames)
+
+</details>
+
+
+<details open>
+<summary>Version 240.2.0</summary>
+
+ * COD - Modern Warfare 3
+    * Add support for new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/call-of-duty-modern-warfare-3)
+
+</details>
+
+
+<details open>
+<summary>Version 240.1.1</summary>
+
+* LOL
+    * Fix an issue in `players_tagline` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 240.1.0</summary>
+
+* R6
+    * Fix `roster` event
+
+* LOL Arena
+    * Fix events
+
+* TFT
+    * Fix events
+
+* LOL
+    * Add new `players_tagline` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends#players_tagline-note)
+
+</details>
+
+
+<details open>
+<summary>Version 240.0.0</summary>
+
+* Fortnite
+    * Fix `match_id` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.7</summary>
+
+* R6
+    * Fix `roster` event
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.6</summary>
+
+* Hearthstone
+    * Fix events
+* PUBG
+    * Fix `knockout` and `knockedout` info-updates
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.5</summary>
+
+* Valorant
+    * Fix `game_mode` and `scoreboard` info-updates
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.4</summary>
+
+* R6
+    * Fix `roster` issue
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.3</summary>
+
+* CS2
+    * Fix `is_ranked` info-update
+    * Fix `match_outcome` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 239.2.1</summary>
+
+* COD - Modern Warfare 2 + Warzone 2.0
+    * New game events
+        * More information about MW2 [here](https://overwolf.github.io/api/live-game-data/supported-games/call-of-duty-modern-warfare-2)
+        * More information about WZ2 [here](https://overwolf.github.io/api/live-game-data/supported-games/call-of-duty-warzone-2-0)
+    * Status pages
+        * Modern Warfare 2 [here](https://overwolf.github.io/status/call-of-duty-modern-warfare-2)
+        * Warzone 2.0 [here](https://overwolf.github.io/status/call-of-duty-warzone-2-0)
+* CS2
+    * New info-update `is_ranked` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#is_ranked-note)
+    * Improved stability of the `live-data` info-updates
+* Apex
+    * Fix weapon names
+* R6
+    * Fix `roster` info-update
+* Valheim
+    * Fix `player_name` info-update
+* Valorant
+    * Add new info-update `abilities` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#me)
+
+</details>
+
+
+<details open>
+<summary>Version 239.1.3</summary>
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 239.1.2</summary>
+
+* WOW
+    * Fix events
+* Valheim
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 239.1.1</summary>
+
+* TFT
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 239.1.0</summary>
+
+* Diablo 4
+    * Fix `xp` info update
+* CS2
+    * Fix an issue in `kill_feed` event
+* Starfield
+    * Add new info-update `planet_name` - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/starfield#location)
+
+</details>
+
+
+<details open>
+<summary>Version 238.3.3</summary>
+
+* Fortnite
+    * Fix events
+
+* Baldur's gate 3
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.3.2</summary>
+
+* R6
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.3.1</summary>
+
+* Apex
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.3.0</summary>
+
+* Valorant
+    * Fix events
+    * Add agent_id in deathmatch to the `roster` and the `scoreboard`
+    * Add `health` info update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#me)
+* CS2
+    * Add total data to KDA events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#events)
+
+</details>
+
+
+<details open>
+<summary>Version 238.2.2</summary>
+
+* TFT
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.2.1</summary>
+
+* Halo
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.2.0</summary>
+
+* MTGA
+    * Add tutorial scenes
+* Baldur's Gate 3
+    * Add support for the game
+    * Status page - [here](https://overwolf.github.io/status/baldurs-gate-3)
+    * Documentation - [here](https://overwolf.github.io/api/live-game-data/supported-games/baldurs-gate-3)
+    * Events
+        * `match_start`
+        * `match_end`
+        * `scene`
+* LOL
+    *   Add `stack` info-update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/league-of-legends#abilities)
+* Rocket League
+    * Fix rank in `players_rank`
+
+</details>
+
+
+<details open>
+<summary>Version 238.1.1</summary>
+
+* POE
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 238.1.0</summary>
+
+* OW2
+    * Add `pseudo_match_id` info update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/overwatch-2#pseudo_match_id-note)
+* CS2
+    * Add `elo_points` info update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#elo_points-note)
+    * Add `color` parameter to the roster - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#roster-note)
+    * Add `round_number` info update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#round_number-note)
+    * Add `pseudo_match_id` info update - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2#pseudo_match_id-note)
+* Valorant
+    * Add `kill_feed` event - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#kill_feed-note)
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.8</summary>
+
+* Minecraft
+    * Fix events when hosting a local server
+* Lost Ark
+    * Fix events
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.7</summary>
+
+* Diablo 4
+    * Fix events
+    * Fix `xp` issue
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.6</summary>
+
+* Halo
+    * Fix events
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.5</summary>
+
+* LOL
+    * Fix `announcer` in public version
+    * Fix `gold`, `heal` and `level` in PBE
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.4</summary>
+
+* Fortnite
+    * Fix an issue in `creative_map` event
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.3</summary>
+
+* R6
+    * Fix `roster` event
+    * Fix `DOKTORS CASTLE` map name
+        
+</details>
+
+
+<details open>
+<summary>Version 237.3.0</summary>
+
+* Rocket League
+    * Add 2 new info-updates
+        * Rank playlist - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#playlists_rank-note)
+        * Players rank - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#players_rank-note)
+* R6
+    * Fix events
+
+* Fortnite
+    * Fix events
+        
+</details>
+
+
+<details open>
+<summary>Version 237.2.3</summary>
+
+* R6
+    * Fix `roster` event
+* PUBG
+    * Fix events
+        
+</details>
+
+
+<details open>
+<summary>Version 237.2.2</summary>
+
+* R6
+    * Disable `roster` event
+
+* New world
+    * Fix `location` event
+        
+</details>
+
+
+<details open>
+<summary>Version 237.2.0</summary>
+
+* TFT
+    * Fix an issue in PBE
+        
+</details>
+
+
+<details open>
+<summary>Version 237.1.0</summary>
+
+* R6
+    * Add plugin protection
+* TFT
+    * Fix events based on PBE
+* CS2
+    * Add new events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2)
+        * `round_ start`
+        * `round_end`
+        * `steam_id`
+        * `game_phase`
+        * `round_phase`
+        * `score`
+        * `mode_name`
+        * `map_name`
+        * `kills`
+        * `deaths`
+        * `assists`
+        * Add `rank` and `hs` (headshots %) to the `roter` info update
+
+</details>
+
+
+<details open>
+<summary>Version 236.2.2</summary>
+
+* Valorant
+    * Fix Fix `headshot` timing issue
+* Valheim
+    * Fix `player_name` event
+
+</details>
+
+
+<details open>
+<summary>Version 236.2.1</summary>
+
+* Valorant
+    * Fix `scoreboard` and `roster` events
+* CS2
+    * Fix an issue in `kill_feed` event
+
+</details>
+
+
+<details open>
+<summary>Version 236.2.0</summary>
+
+* Valorant
+    * Add information to round_report info-update
+        * `hit`
+        * `bodyshots`
+        * `legshots`
+        * `damage_received`
+        * `hits_received`
+        * `ability_damage`
+* Fortnite
+    * Fix events in Creative Maps 2.0
+* CS2
+    * Fix an issue in `kill_feed` event
+*   New World
+     *Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 236.1.0</summary>
+
+* Minecraft
+    * Support new Minecraft version - 1.20.2
+        * Forge - 48.0.6
+        * Fabric - 0.14.22
+* Rocket League
+    * New events for training packs  - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/rocket-league#training)
+    * Add information to players' event
+        * `platform`
+        * `player_id`
+        * `assists`
+        * `saves`
+        * `shots`
+        * `mvp`
+* Starfield
+    * Add support for new game events - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/starfield)
+        * `Match start`
+        * `Match end`
+        * `Location`
+* CS2  -  more information [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2)
+    * Add `roster` event
+    * Add `game_mode` event
+    * Add `match_outcome` event
+    * Add `kill_feed` event
+
+</details>
+
+
+<details open>
+<summary>Version 236.0.3</summary>
+
+* R6
+    * Fixed events
+
+</details>
+
+
+<details open>
+<summary>Version 236.0.2</summary>
+
+* Fortnite 
+    * Fixed events
+* R6
+    * Fixed events
+
+</details>
+
+
+<details open>
+<summary>Version 236.0.1</summary>
+
+* LoL
+    * Improved the events stability
+* TFT
+    * Improved the events stability
+    * Fixed PBE events
+* Counter-Strike 2
+    * Added GEP upport for the game - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/counter-strike-2)
+       * `kill`
+       * `death`
+       * `assist` 
+       * `match_start`
+       * `match_end`
+
+</details>
+
+
+<details open>
+<summary>Version 235.1.4</summary>
+
+* R6
+    * Fix events
+
+* Apex
+    * Fix `tabs` event
+    * Fix `victory` event in Trios
+    * Support HALLOWEEN - new game mode 
+
+* Fortnite
+    * Fix `ping`, `matchId` and `sessionId` events
+
+</details>
+
+
+<details open>
+<summary>Version 235.1.2</summary>
+
+* R6
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 235.1.1</summary>
+
+* R6
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 235.1.0</summary>
+
+* Diablo 4
+    * New game events
+        * `xp` - info [here](https://overwolf.github.io/api/live-game-data/supported-games/diablo-4#xp-note)
+        * `health` - info [here](https://overwolf.github.io/api/live-game-data/supported-games/diablo-4#health-note)
+        * `death` - info [here](hhttps://overwolf.github.io/api/live-game-data/supported-games/diablo-4#death-note)
+
+* R6
+    * Fix `health` event
+
+</details>
+
+
+<details open>
+<summary>Version 235.0.2</summary>
+
+* Fortnite
+    * Fix events
+    * Disabled events: 
+        * `match_id`
+        * `party_id`
+        * `ticket_id`
+        * `session_id`
+        * `roster`
+        * `ping`
+
+* R6
+    * Fix `roster` event
+    * `health` event is still disabled
+
+</details>
+
+
+<details open>
+<summary>Version 235.0.1</summary>
+
+* TFT
+    * Fix events for the next patch based on PBE
+
+* R6
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.9</summary>
+
+* R6
+    * Plugin with fixed events
+    * `health` event was disabled until fixed
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.5</summary>
+
+* WOW
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.4</summary>
+
+* R6
+    * Fixed `roster`, `game_mode`, and `number` Info-Updates
+    * `phase`, `score`, and `match_id` Info-Updates are temporarily disabled
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.3</summary>
+
+* PUBG
+    * Fixed events
+* WoW
+    * Fixed events
+* MTGA
+    * Fixed `inventory_cards` Info-Update 
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.2</summary>
+
+* POE
+    * Fixed events
+* R6
+    * Partial events fix
+    * These are the events that will work
+        * Events
+            * matchOutcome
+            * roundStart
+            * roundEnd
+            * roundOutcome
+            * headshot
+            * kill
+            * death
+            * match_start
+            * match_end
+        * Info updates
+            * map_id
+            * round_outcome_type
+            * account_id_log
+            * score_log
+            * round_start_log
+            * round_end_log
+            * round_outcome_type
+            * move_log
+            * match_start_log
+            * match_end_log
+            * kill_log
+            * death_log
+            * general_log
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.1</summary>
+
+* Fortnite
+    * Fixed `inventory`,  `hit`, `total_shots`, `accuracy` and `creative_map` Info-Updates
+
+</details>
+
+
+<details open>
+<summary>Version 234.0.0</summary>
+
+* SOTF
+    * Fixed the `location` event
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.9</summary>
+
+* Dota
+    * Fixed events
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.8</summary>
+
+* Diablo 4   
+    * Fixed events
+* LoL/TFT    
+    * Fixed an issue when reconnecting to a match quickly
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.7</summary>
+
+* R6  
+    * Fixed events
+* Valorant   
+    * Added support for new map Juliett (Sunset) 
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.6</summary>
+
+* LoL PBE 
+    * Fixed events
+* TFT PBE 
+    * Fixed events
+* LoL-Arena PBE 
+    * Fixed events
+* Axie  
+    * Fixed `last_card_played` Info-Update
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.5</summary>
+
+* Fortnite 
+    * Fix events
+    * `inventory`, `hit`, `total_shots`, `accuracy` and `creative_map` Info-Updates are temporarily disabled
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.4</summary>
+
+* MTGA
+    * Fixed draft event
+* Hearthstone
+    * Fixed `match_start` event
+* MTGA
+    * Fixed events
+    * `deck_piles` and `last_card_played` Info-Updates are temporarily disabled
+* Valheim
+    * Fixed `respawn` event
+    * Fixed `death`, `inventory` and `state` Info-Updates 
+
+</details>
+
+<details open>
+<summary>Version 233.2.2</summary>
+
+* POE
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.1</summary>
+
+* Apex
+    * Fix an issue in detecting the local player while in a party
+
+* Lost ark
+    * Fix `mob_details` info update
+
+</details>
+
+
+<details open>
+<summary>Version 233.2.0</summary>
+
+* Valorant
+     * Re-enable spike events
+
+* FF
+    * Fix an issue with names in Chinese/Korean in contact event 
+
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 233.1.1</summary>
+
+* Diablo 4
+    * Fix events 
+
+</details>
+
+
+<details open>
+<summary>Version 233.0.1</summary>
+
+* TFT
+    * Fix events 
+
+* Arena
+    * Fix an issue in `victory` event with detecting the first-place team
+
+</details>
+
+
+<details open>
+<summary>Version 233.0.0</summary>
+
+* Tarkov
+    * Fix `death`` event
+
+</details>
+
+
+<details open>
+<summary>Version 232.4.3</summary>
+
+* Tarkov
+    * Fix events
+* Halo
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 232.4.2</summary>
+
+* Valorant
+    * Disable spike events
+* PUBG
+    * Fix events
+
+</details>
+
+
+<details open>
+<summary>Version 232.4.1</summary>
+
+* Valorant
+    * Fix spike events issue
+
+</details>
+
+
+<details open>
+<summary>Version 232.4.0</summary>
+
+* Valorant
+    * Fix `game_mode` info-update
+    * Add new event - spike  - more information [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#spike_planted-note)
+        * `spike_planted`
+        * `spike_defused`
+        * `spike_detonated`
+* Apex
+    * Fix `game_mode` info-update
+
+</details>
+
+
+<details open>
+<summary>Version 232.3.1</summary>
+
+* Fortnite
+    * Fix `matp_id` issue
+
+</details>
+
+
+<details open>
+<summary>Version 232.3.0</summary>
+
+* Hearthstone
+    * Fix an issue with the opponent name in battleground mode
+* CS:GO
+    * Fix MVP issue
+* LOL Arena
+    * Fix first round detection and timing
+* Fortnite
+    * Fix `match_id` in squads issue
+    * Add new parameters in `creative_map` event - more info [here](https://overwolf.github.io/api/live-game-data/supported-games/fortnite#creative_map-note)
+
+</details>
+
+
+<details open>
+<summary>Version 232.2.1</summary>
+
+* R6
+   * Fixed an issue with the `roster` Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 232.2.0</summary>
+
+* Valorant
+    * Added parameters to the `scoreboard` Info-Update 
+        * weapon
+        * ult_points
+        * ult_max
+        * shield
+ * more details [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#scoreboard-note)
+
+</details>
+
+
+<details open>
+<summary>Version 232.0.0</summary>
+
+* TFT PBE
+    * Fixed events 
+* LoL PBE 
+    * Fixed `level` Info-Update
+* LoL - Arena PBE
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.3.3</summary>
+
+* WoW
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.3.1</summary>
+
+* Fortnite
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.3.0</summary>
+
+* Final Fantasy XIV
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.2.0</summary>
+
+* POE
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.9</summary>
+
+* R6
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.8</summary>
+
+* WoW
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.7</summary>
+
+* LoL - Arena
+    * Fixed players missing from the `teams` Info-update
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.6</summary>
+
+* WoW
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.4</summary>
+
+* TFT
+    * Fixed an issue with the `battle_start` event 
+* Dota
+   * Fixed `hero` Info-update detection issue after the firs match 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.3</summary>
+
+* Diablo 4
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.2</summary>
+
+* Valorant   
+    * Fixed `rank` parameter in `game_mode` Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.1</summary>
+
+* LoL PBE
+    * Fixed events
+* R6
+    * Fixed events
+
+</details>
+
+
+<details open>
+<summary>Version 231.1.0</summary>
+
+* LoL - Arena
+    * Fixed aram game detection
+* TFT PBE 
+    * Fixed events 
+* Valorant
+    * Added `is_attacker_teammate` and `is_victim_teammate` parameters to `kill_feed` Info-update - more details [here](https://overwolf.github.io/api/live-game-data/supported-games/valorant#kill_feed-note)
+
+</details>
+
+
+<details open>
+<summary>Version 231.0.0</summary>
+
+* LoL - Arena
+    * Fixed events 
+
+</details>
+
+
+<details open>
+<summary>Version 230.2.2</summary>
+
+* LoL - Arena
+    * Added new events in arena mode - more details [here](/api/live-game-data/supported-games/league-of-legends-arena)
+
+</details>
+
+
+<details open>
+
+<summary>Version 230.1.4</summary>
+
+* Valorant   
+    * Fixed `rank` parameter in `game_mode` Info-update  
+* PUBG 
+    * Fixed events 
+* WoW
+    * Fixed events   
+
+</details>
+
+
+<details open>
+<summary>Version 230.1.3</summary>
+
+* Valorant   
+    * Fixed events 
+    * `rank` parameter in `game_mode` is temporarily disabled
+
+</details>
+
+
+<details open>
+<summary>Version 230.1.2</summary>
+
+* New World  
+    * Fixed `location` Info-update  
+
+</details>
+
+
+<details open>
+<summary>Version 230.1.1</summary>
+
+* Rocket League 
+    * Fixed language issue in `game_type` 
+* Dota 
+    * Fixed teammate pre-pick issue
+
+</details>
+
+
+<details open>
+<summary>Version 230.1.0</summary>
+
+* Valorant 
+    * Fixed an issue  
+* R6 
+    * Fixed `game_mode` timing issue 
+
+</details>
+
+
+<details open>
+<summary>Version 229.3.2</summary>
+
+* TFT
+    * Fixed broken events 
+* Hearthstone
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 229.3.1</summary>
+
+* R6
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 229.3.0</summary>
+
+* Apex
+    * Added `is_local`parameter to the `legendSelect` Info-update - more details [here](/api/live-game-data/supported-games/apex-legends#legendselect_x-notes)
+* Diablo 4 
+    * New Info-updates - more details [here](/api/live-game-data/supported-games/diablo-4)
+    * `name`
+    * `class`
+    * `level` 
+    * `gold`
+    * `battle_tag`
+* CS:GO
+    * Fixed an issue where `mvp` event isn't fired while spectating
+    * Fixed `match_outcome` Info-update in arms race mode 
+* PUBG 
+    * Fixed an issue where players get wrong events while speacting
+    * Fixed `safe_zone` Info Update 
+    
+</details>
+
+
+<details open>
+<summary>Version 229.2.0</summary>
+
+* Overwatch 2  
+    * Added support for new game - more details [here](/api/live-game-data/supported-games/overwatch-2)
+* TFT PBE 
+    * Fixed broken events 
+* LoL PBE 
+    * Fixed an issue with `jungle_camps` Info-update
+* Valorant 
+    * Fixed an issue with `game_mode` Info-update 
+    * Added support for `team_deathmatch` game mode
+ 
+</details>
+
+
+<details open>
+<summary>Version 229.1.0</summary>
+
+* Apex
+    * Fixed the `victory` Info-update in DeathMatch, Gun Run, and Control game modes 
+* Diablo 4 
+    * Added new `location` Info-update - more details [here](/api/live-game-data/supported-games/diablo-4#location-note)
+* Halo 
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 229.0.3</summary>
+
+* Apex
+    * Fixed broken events 
+    * The `victory` Info-update is temporarily disabled in DeathMatch, Gun Run, and Control game modes 
+
+</details>
+
+
+<details open>
+<summary>Version 229.0.2</summary>
+
+* TFT
+    * Fixed an issue with the `picked_augment` Info-update 
+* PUBG 
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 229.0.1</summary>
+
+* Valorant
+    * Fixed an issue with scoreboard Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 229.0.0</summary>
+
+* Valorant
+    * Fixed an issue with the `roster` and `scoreboard` Info-updates 
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.6</summary>
+
+* Valorant
+    * Fixed an issue when the internet connection is lost during a match 
+* R6 
+   * Fixed issues with the `round` and `roster` Info-updates
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.5</summary>
+
+* Valheim
+    * Fixed `kill` and `damage` events
+* R6
+   * Fixed an issue with the `roster` Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.4</summary>
+
+* TFT
+    * Fixed `picked_augment` Info-update - more details [here](/api/live-game-data/supported-games/teamfight-tactics#picked_augment-note)
+    * Added support for new game ID for PBE
+* LoL
+   * Added support for new game ID for PBE
+* PUBG 
+   * Fixed broken events  
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.3</summary>
+
+* TFT
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.2</summary>
+
+* TFT
+    * Hotfix 
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.1</summary>
+
+* Lol
+    * Fixed `match_clock` Info-update 
+    * Fixed the `icon_status` parameter in the `jungle_camps` Info-update  
+* TFT PBE
+    * Fixed `me` (augments) Info-update 
+    * `picked_augment` Info-update is temporarily disabled
+* Valheim 
+    * Fixed broken events 
+    * `kill` and `damage` events are temporarily disabled
+* WoW 
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 228.3.0</summary>
+
+* Diablo 4
+    * Added support for new game - more details [here](/api/live-game-data/supported-games/diablo-4)
+      * `match_start`
+      * `match_end`
+
+</details>
+
+
+<details open>
+<summary>Version 228.2.1</summary>
+
+* Fortnite
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 228.2.0</summary>
+
+* Valorant
+    * Fixed broken events
+* Minecraft
+   * Added support for game version 1.20 
+
+</details>
+
+
+<details open>
+<summary>Version 228.1.0</summary>
+
+* TFT PBE  
+    * Fixed `local_player_damage`Info-update 
+* CS:GO 
+    * Fixed an issue with the `assist` event 
+* R6 
+   * Replaced `game_mode_log` Info-update with `game_mode` - more info [here](/api/live-game-data/supported-games/rainbow-six-siege#game_mode-note)
+   * Fixed an issue with the `roster` Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 228.0.0 </summary>
+
+* Valorant
+    * Fixed an issue with the `kill_feed` Info-update 
+* Axie 
+    * Fixed an issue with the `last_card_played` and `fighter` Info-updates 
+
+</details>
+
+
+<details open>
+<summary>Version 227.1.4</summary>
+
+* R6 
+    * Fixed broken events
+    * `game_mode_log` Info-update is disabled 
+
+</details>
+
+
+<details open>
+<summary>Version 227.1.3</summary>
+
+* Hearthstone 
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 227.1.0</summary>
+
+* TFT
+    * Fixed `shop_pieces`Info-update
+    * Fixed `gold`Info-update
+
+</details>
+
+
+<details open>
+<summary>Version 227.0.3</summary>
+
+* Lost ark 
+    * Fixed broken events       
+
+</details>
+
+
+<details open>
+<summary>Version 227.0.2</summary>
+
+* PUBG 
+    * Fixed broken events
+     
+</details>
+
+
+<details open>
+<summary>Version 227.0.1</summary>
+
+* Sons Of The Forest
+    * Fixed an issue with the `npc location` Info-update
+     
+</details>
+
+
+<details open>
+<summary>Version 227.0.0</summary>
+
+* Lost Ark
+    * Added new `location` Info-update - more details [here](/api/live-game-data/supported-games/lost-ark#location)
+    * Added new `map` Info-update - more details [here](/api/live-game-data/supported-games/lost-ark#location)
+* Sons Of The Forest
+    * Added rotation parameters to the `loction` Info-update - more details [here](/api/live-game-data/supported-games/sons-of-the-forest#location)
+    * Added new `npc_location` Info-update - more details [here](/api/live-game-data/supported-games/sons-of-the-forest#location)
+
+</details>
+
+
+<details open>
+<summary>Version 226.0.0</summary>
+
+* PUBG
+    * Fixed broken events: 
+    * location		
+    * map		
+    * body position		
+    * stance			
+    * aiming		
+    * free view		
+    * movement				
+    * revived		
+    * damage dealt		
+    * jump
+    * knockedout
+* Partially working events:
+    * phase
+    * health(ko health only) 	    
+
+</details>
+
+
+<details open>
+<summary>Version 225.3.3</summary>
+
+* Fortnite
+    * Fixed broken events 
+     
+</details>
+
+
+<details open>
+<summary>Version 225.3.2</summary>
+
+* TFT
+    * Fixed incorrect `name` and `type` values in the`round_type` Info-update and added new types, `Augment_1`, `Augment_2`, `Augment_3`
+* WoW 
+    * Fixed broken events
+* R6 
+    * Fixed an issue with the `phase` Info-update
+
+</details>
+
+
+<details open>
+<summary>Version 225.3.1</summary>
+
+* LoL
+    * Fixed an issue with the `level` Info-update
+* Dota 
+    * Fixed `MMR` Info-update
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.7</summary>
+
+* Halo
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.6</summary>
+
+* Hearthstone
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.5</summary>
+
+* PUBG
+    * Fixed broken events 
+
+</details>
+
+   
+<details open>
+<summary>Version 225.1.4</summary>
+
+* Valorant 
+    * Fixed an issue with the `map` Info-update reset when a match is cancelled
+* TFT 
+   * Fixed an issue with events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.3</summary>
+
+* Dota 
+    * Fixed an issue with the `MMR` Info-update 
+* Hearthstone
+    * Fixed the `premiumCount` parameter in the `decks` Info-update
+    * Fixed `arena_draft` Info-update
+    * Fixed `arena_deck` Info-update 
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.2</summary>
+
+* PUBG
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.1.1</summary>
+
+* WoW
+    * Fixed broken events 
+    * Added `rating` parameter to the `group_applicants` Info-update - more details [here](/api/live-game-data/supported-games/world-of-warcraft#group_applicants-note)
+* Diablo 2 
+    * Fixed broken events 
+    
+</details>
+
+
+<details open>
+<summary>Version 225.1.0</summary>
+
+* Dota
+    * Added new Info-update - `MMR` - more details [here](/api/live-game-data/supported-games/dota-2#me-note)
+
+</details>
+
+
+<details open>
+<summary>Version 225.0.2</summary>
+
+* LoL
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.0.1</summary>
+
+* TFT 
+    * Fixed broken events for patch 13.9
+* Valhaim
+    * Fixed an issue with the `location` Info Update 
+* Fortnite
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 225.0.0</summary>
+
+* Valorant
+    * Fixed game issue 
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.8</summary>
+
+* Valorant
+    * Fixed an issue when lanuching Overwolf while Valorant is already running   
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.6</summary>
+
+* Valorant
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.5</summary>
+
+* PUBG
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.4</summary>
+
+* Dota
+    * Added team_slot parameter to the players (roster) Info Update - more details [here](/api/live-game-data/supported-games/dota-2#players-note)
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.3</summary>
+
+* Dota
+    * Fixed an issue with the `players` (roster) Info update 
+
+</details>
+
+
+<details open>
+<summary>Version 224.2.2</summary>
+
+* LoL
+    * Added `chat` event - more details [here](/api/live-game-data/supported-games/league-of-legends#chat-note)
+* Rocket League 
+    * Fixed an issue affecting player name fields when a player contained special characters
+* CS:GO 
+    * Fixed an issue with the `kill_feed` event  
+
+</details>
+
+
+<details open>
+<summary>Version 224.1.2</summary>
+
+* Dota
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 224.1.1</summary>
+
+* PUBG 
+    * Partially fixed broken events
+* Working events: 
+    * match_id
+    * pseudo_match_id
+    * mode 
+    * kill
+    * kills
+    * headshot
+    * headshots
+    * max_kill_distance
+    * damage_dealt
+    * total_damage_dealt
+    * death
+    * rank
+    * roster
+    * view
+    * red_zone
+    * blue_zone
+    * safe_zone
+    * time_to_next_circle
+    * matchsStart
+    * matchEnd
+
+</details>
+
+
+<details open>
+<summary>Version 224.1.0</summary>
+
+* Apex 
+    * Fixed an issue with the `legend_select` event
+    * Fixed an issue with the `kill` event when playing in Japanese
+* Valorant 
+    * Fixed an issue with the `game_mode` event reset when a match is cancelled 
+* Dota
+    * Major stability improvements
+    * Added `rank` parameter to the `players` (roster) Info Update
+
+</details>
+
+
+<details open>
+<summary>Version 224.0.3</summary>
+
+* TFT
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 224.0.1</summary>
+
+* TFT - Overwolf 
+  * Fixed an issue with the `board_pieces` event 
+* Valheim
+  * fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 223.4.0</summary>
+
+* New world 
+    * Fixed broken events 
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.13</summary>
+
+* Valorant 
+    * Bug fixing 
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.12</summary>
+
+* R6
+    * Fixed an issue with the `health` event
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.11</summary>
+
+* TFT (Overwolf) 
+    * Fixed the `items` field in the `carousel_pieces` event 
+    * Fixed the `items` and `level` fields in the `board_pieces` event
+    * Fixed the `items` and `level` fields in the `bench_pieces` event 
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.10</summary>
+
+* TFT (Overwolf) fixed the following events: 
+    * `shop_pieces`
+    * `gold` 
+    * `me` (augments)
+    * `picked_augment`
+* Known issues: (yellow status)
+    * `carousel_pieces` - `items` field is temporarily disabled 
+    * `board_pieces` -  `items` and `level` fields are temporarily disabled 
+    * `bench_pieces` -  `items` and `level` fields are temporarily disabled 
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.9</summary>
+
+* TFT (Overwolf version) added GEP support for the 64bit version of the game
+* Temporally disabled events:  
+    * `shop_pieces`
+    * `gold` 
+    * `me` (augments)
+    * `picked_augment`
+* Known issues: (yellow status)
+    * `carousel_pieces` - `items` field is temporarily disabled 
+    * `board_pieces` -  `items` and `level` fields are temporarily disabled 
+    * `bench_pieces` -  `items` and `level` fields are temporarily disabled 
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.6</summary>
+
+* POE
+  * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.5</summary>
+
+* POE
+  * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.4</summary>
+
+* LoL
+  * Fixed an issue with the `jungle_camps` event
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.3</summary>
+
+* LoL
+  * Fixed an issue with the `jungle_camps` event
+
+</details>
+
+
+<details open>
+<summary>Version 223.3.1</summary>
+
+* LoL
+   * Added GEP support for the 64 bit version of the game
+* New World
+   * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 223.2.0</summary>
+
+* POE
+   * Fixed an issue with the `boss_kill` event
+* New World
+   * Fixed coordinates in the `location` event 
+
+</details>
+
+
+<details open>
+<summary>Version 223.1.2</summary>
+
+* POE
+   * Fixed broken events 
+   * `boss_kill` event is temporarily disabled
+
+</details>
+
+
+<details open>
+<summary>Version 223.1.1</summary>
+
+* Valorant 
+   * Fixed an issue with the `roster` and `scoreboard` events
+
+</details>
+
+
+<details open>
+<summary>Version 223.1.0</summary>
+
+* Halo 
+   * Fixed broken events 
+* Apex
+   * Fixed broken events 
+   * Added support for `victory` and `tabs` events in Conrol and Gun Run GameModes 
+* Valheim
+   * Fixed broken events 
+* Valorant
+   * Fixed an issue with the game_mode event  
+
+</details>
+
+
+<details open>
+<summary>Version 223.0.0</summary>
+
+* Axie
+   * Fixed broken events 
+* MC
+   * Minor bug fixing
+
+</details>
+
+
+<details open>
+<summary>Version 222.4.4</summary>
+
+* TFT 
+   * Fixed broken events 
+    
+</details>
+
+
+<details open>
+<summary>Version 222.4.2</summary>
+
+* Sons Of The Forest 
+   * Fixed broken events 
+    
+</details>
+
+
+<details open>
+<summary>Version 222.4.1</summary>
+
+* LoL
+   * Fixed broken events
+* R6
+   * Fixed broken events
+    
+</details>
+
+
+<details open>
+<summary>Version 222.4.0</summary>
+
+* Halo
+   * Fixed broken events
+* Minecraft
+   * Added support for game version 1.19.4
+    
+</details>
+
+
+<details open>
+<summary>Version 222.3.2</summary>
+
+* PUBG
+   * Fixed broken events
+* Halo
+   * Added support for the `btb_unlimited` playlist
+    
+</details>
+
+
+<details open>
+<summary>Version 222.3.1</summary>
+
+* TFT and TFT PBE 
+   * Fixed broken PBE events 
+   * Added new info update `picked_augment` - more details [here](/api/live-game-data/supported-games/teamfight-tactics#picked_augment-note)
+
+</details>
+
+
+<details open>
+<summary>Version 222.2.0</summary>
+
+* LEAP
+    * Added support for new game events - more details [here](/api/live-game-data/deprecated/leap)
+         * kill
+         * death
+         * match_outcome
+
+</details>
+
+
+<details open>
+<summary>Version 222.1.1</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 222.1.0</summary>
+
+* LEAP
+    * Added initial GEP support for new game events - more details [here](/api/live-game-data/deprecated/leap)
+         * `match_star`
+         * `match_end`
+         * `server_info`
+    * Status page can be found [here](/status/leap)
+    * Events sample app [here](https://github.com/overwolf/events-sample-apps/tree/master/leap-events-sample-app)
+
+</details>
+
+
+<details open>
+<summary>Version 222.0.0</summary>
+
+* R6
+    * Fixed broken events
+* Sons of the Forest
+    * Fixed an issue with the `location` event
+
+</details>
+
+
+<details open>
+<summary>Version 221.3.1</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 221.3.0</summary>
+
+* PoE
+    * Fixed broken events
+
+* Halo
+    * Fixed broken events
+
+* Lost Ark
+    * Added the `health_phase` parameter to the `mob_details` Info Update - more info [here](/api/live-game-data/supported-games/lost-ark#mob_details-note)
+
+</details>
+
+
+<details open>
+<summary>Version 221.2.4</summary>
+
+* Valorant
+    * Fixed an issue with the `game_mode` event
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 221.2.3</summary>
+
+* LoL
+    * Fixed an issue with the `jungle_camps` event
+
+* TFT
+    * Fixed an issue with the `augments` event
+
+</details>
+
+
+<details open>
+<summary>Version 221.2.2</summary>
+
+* Dota
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 221.2.1</summary>
+
+* Apex
+    * Fixed an issue with the `match_start` event
+    * Added support for the `Nemesis` weapon
+    * Missing weapon names will now be detected as `unknown`
+
+</details>
+
+
+<details open>
+<summary>Version 221.2.0</summary>
+
+* Tarkov
+    * Added new event `death` - more info [here](/api/live-game-data/supported-games/escape-from-tarkov#death-note)
+
+* Sons of the Forest
+    * Fixed broken events
+    * Added new event `death` - more info [here](/api/live-game-data/supported-games/sons-of-the-forest#death-note)
+
+</details>
+
+
+<details open>
+<summary>Version 221.1.3</summary>
+
+* Dota
+    * The `steamId` and `name` fields in `roster` will now only be sent after the game state changes to `DOTA_GAMERULES_STATE_STRATEGY_TIME`, in order to comply with the new Dota guidelines - more details [here](https://store.steampowered.com/news/app/570/view/3659774959178253450)
+
+* Apex
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 221.1.2</summary>
+
+* Sons of the Forest
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 221.1.1</summary>
+
+* R6
+    * Fixed an issue involving Vulkan
+
+</details>
+
+
+<details open>
+<summary>Version 221.1.0</summary>
+
+* Apex
+    * Fixed an issue with the `roster` event when leaving a match during legend select
+    * Fixed an issue affecting player name fields when the player name was using special characters
+    * Added support for Team Deathmatch
+
+* Sons of the Forest
+    * Added initial GEP support for new game events - more details [here](/api/live-game-data/supported-games/sons-of-the-forest). Includes:
+        * `match_start`
+        * `match_end`
+        * `location`
+    * Status page can be found [here](/status/sons-of-the-forest)
+    * Sample app can be found [here](https://github.com/overwolf/events-sample-apps/tree/master/sons-of-the-forest-events-sample-app)
+
+</details>
+
+
+<details open>
+<summary>Version 220.2.3</summary>
+
+* Escape from Tarkov
+    * Fixed an issue with the `map` event
+
+</details>
+
+
+<details open>
+<summary>Version 220.2.2</summary>
+
+* TFT
+    * Fixed broken events
+
+* LoL
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 220.2.1</summary>
+
+* CS:GO
+    * Fixed an issue with the `scoreboard` event
+
+</details>
+
+
+<details open>
+<summary>LEP Version 220.0.0</summary>
+
+* LoL Launcher
+    * Fixed an issue affecting `league_points`
+
+</details>
+
+
+<details open>
+<summary>Version 220.2.0</summary>
+
+* LoL and TFT
+    * Fixed the `game_mode` event
+
+* CS:GO
+    * Fixed an issue with `weapon_name` in `kill_feed`
+    * The `match_outcome` event now supports the `Arms Race` mode - more info [here](/api/live-game-data/deprecated/counter-strike-global-offensive#match_outcome-note)
+    * Fixed an issue with the `team_set` event
+
+</details>
+
+
+<details open>
+<summary>Version 220.1.2</summary>
+
+* Diablo 2
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 220.1.1</summary>
+
+* Halo
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 220.1.0</summary>
+
+* Apex
+    * Fixed broken events
+
+* PUBG
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 220.0.0</summary>
+
+* CS:GO
+    * The `score` event now works in spectator mode
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 219.2.3</summary>
+
+* LoL
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 219.2.2</summary>
+
+* Fortnite
+    * Fixed the `hit` and `accuracy` events
+
+* Valorant
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 219.2.1</summary>
+
+* R6
+    * Fixed broken events for affected users
+
+</details>
+
+
+<details open>
+<summary>Version 219.2.0</summary>
+
+* Tarkov
+    * Fixed `match_end` event timing
+
+* TFT PBE
+    * Fixed `gold` event
+
+* Apex
+    * Added `origin_id` to [`roster`](/api/live-game-data/supported-games/apex-legends#roster)
+    * Fixed an issue with the `game_mode` sending a wrong initial value
+
+</details>
+
+
+<details open>
+<summary>Version 219.1.2</summary>
+
+* PoE
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 219.1.1</summary>
+
+* Fortnite
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 219.1.0</summary>
+
+* PoE
+    * Added new even - [`chat`](/api/live-game-data/supported-games/path-of-exile#chat-note)
+    * Added new language events - [`language`](/api/live-game-data/supported-games/path-of-exile#game_info) and [`chat_language`](/api/live-game-data/supported-games/path-of-exile#game_info)
+
+* Dota 2
+    * Fixed an issue that would happen when the game wasn't installed
+
+* CS:GO
+    * Fixed an issue that would happen when the game wasn't installed
+
+</details>
+
+
+<details open>
+<summary>LEP Version 219.0.3</summary>
+
+* LoL Launcher
+    * Fixed an issue with the `selected_positions` event
+
+</details>
+
+
+<details open>
+<summary>LEP Version 219.0.2</summary>
+
+* LoL Launcher
+    * Disabled `selected_positions` event due to an issue
+    
+</details>
+
+
+<details open>
+<summary>LEP Version 219.0.1</summary>
+
+* LoL Launcher
+    * Added new event - [`selected_positions`](/api/live-game-data/supported-launchers/league-of-legends#selected_positions-note)
+
+</details>
+
+
+<details open>
+<summary>Version 219.0.0</summary>
+
+* Minecraft
+    * Added event support for modded sessions, more details [here](/api/live-game-data/supported-games/minecraft#game-event-status)
+    * Currently supported modded sessions:
+        * Forge 36.0.0 - 36.2.39 [Full Support]
+        * Forge 39.0.0 - 44.1.8 [Full Support]
+        * Fabric 0.14.0 - 0.14.13 [Full Support]
+        * Other Fabric/Forge sessions of supported Minecraft versions [Partial support]
+
+</details>
+
+
+<details open>
+<summary>Version 218.1.1</summary>
+
+* R6
+    * Added support for the map `HEREFORD BASE`
+
+</details>
+
+
+<details open>
+<summary>LEP Version 218.0.1</summary>
+
+* LoL Launcher
+    * Added new event - [`selected_game`](/api/live-game-data/supported-launchers/league-of-legends#selected_game-note)
+
+</details>
+
+
+<details open>
+<summary>Version 218.1.0</summary>
+
+* PUBG
+    * Fixed broken events
+* LoR
+    * Added new events - `match_start` and `match_end`
+* WoT
+    * Added new events - `match_start` and `match_end`
+
+</details>
+
+
+<details open>
+<summary>Version 218.0.0</summary>
+
+* Apex
+    * Fixed an issue with `name` spacing in `kill_feed`
+    * Fixed an issue in the `roster` and `teammate` events
+    * Fixed the `damage` and `totalDamageDealt` events
+
+</details>
+
+
+<details open>
+<summary>Version 217.3.4</summary>
+
+* Apex
+    * Fixed broken events
+    * `damage` is still down
+
+</details>
+
+
+<details open>
+<summary>Version 217.3.3</summary>
+
+* LoL
+    * Fixed an issue involving `jungle_camps`
+
+* Warframe
+    * Fixed performance issue
+
+</details>
+
+
+<details open>
+<summary>Version 217.3.1</summary>
+
+* Valorant
+    * Added support for new map - `Jam`
+
+</details>
+
+
+<details open>
+<summary>Version 217.3.0</summary>
+
+* Minecraft
+    * Added support for game version 1.19.3
+
+</details>
+
+
+<details open>
+<summary>Version 217.2.0</summary>
+
+* Lost Ark
+    * Added event support - more details [here](/api/live-game-data/supported-games/lost-ark)
+
+</details>
+
+
+<details open>
+<summary>Version 217.1.0</summary>
+
+* Apex
+    * Added support for the `Latin American Spanish` language
+    * Fixed multi language support in `kill_feed`
+
+</details>
+
+
+<details open>
+<summary>Version 217.0.0</summary>
+
+* Valorant
+    * `game_mode` will now trigger before the match actually starts.
+    * Added new info update `map` - more details [here](/api/live-game-data/supported-games/valorant#map-note)
+
+* Warframe
+    * Improved event stability
+
+</details>
+
+
+<details open>
+<summary>Version 216.1.1</summary>
+
+* Tarkov
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 216.1.0</summary>
+
+* Valorant
+    * Added support for the `switftplay` mode
+    * Added `player_id` to the scoreboard event
+    * Fixed an issue involving the `roster` event and the name privacy setting
+    * Fixed the `teammate` indicator in scoreboard
+
+</details>
+
+
+<details open>
+<summary>Version 216.0.0</summary>
+
+* R6
+    * Fixed `roster` event
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.10</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.6</summary>
+
+* PoE
+    * Fixed the `feature` value of `match_outcome`
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.5</summary>
+
+* R6
+    * Fixed `roster` event
+    * Added support for the `NIGHTHAVEN LABS` map
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.4</summary>
+
+* PoE
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.3</summary>
+
+* Halo
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.2</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.1</summary>
+
+* Apex
+    * Fixed an issue with the new events from version 215.2.0
+
+</details>
+
+
+<details open>
+<summary>Version 215.2.0</summary>
+
+* Apex
+    * Fixed an issue with the `victory` event in the arena game mode
+    * Added `platform_id to the `roster` event - more info [here](/api/live-game-data/supported-games/apex-legends#roster)
+    * Added new info update `map_id` - more details [here](/api/live-game-data/supported-games/apex-legends#map_id-note)
+    * Added new info update `phase` - more details [here](/api/live-game-data/supported-games/apex-legends#phase-note)
+    * Added new info update `arena_score` - more details [here](/api/live-game-data/supported-games/apex-legends#arena_score-note)
+
+</details>
+
+
+<details open>
+<summary>Version 215.1.3</summary>
+
+* Halo
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.1.2</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 215.1.1</summary>
+
+* LoL
+    * Fixed an issue with the `total_gold` parameter in the `gold` event
+
+</details>
+
+
+<details open>
+<summary>Version 215.1.0</summary>
+
+* LoL
+    * Added the `total_gold` parameter to the `gold` event - more info [here](/api/live-game-data/supported-games/league-of-legends#gold)
+
+</details>
+
+
+<details open>
+<summary>Version 215.0.0</summary>
+
+* Diablo
+    * Converted `dropped_items` from an info update into an event
+
+</details>
+
+
+<details open>
+<summary>Version 214.1.2</summary>
+
+* Hearthstone
+    * Fixed broken events
+
+* Tarkov
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 214.1.1</summary>
+
+* TFT
+    * Fixed `board_pieces` event
+
+</details>
+
+
+<details open>
+<summary>Version 214.1.0</summary>
+
+* R6
+    * Fixed `killer` event
+
+</details>
+
+
+<details open>
+<summary>Version 214.0.4</summary>
+
+* R6
+    * Fixed `roster` event
+
+</details>
+
+
+<details open>
+<summary>Version 214.0.3</summary>
+
+* Apex
+    * Fixed `champ_select` event
+
+* R6
+    * Fixed an issue with the `game_mode_log` event
+
+</details>
+
+
+<details open>
+<summary>Version 214.0.0</summary>
+
+* Apex
+    * Fixed `inUse` event
+
+* LoL Launcher
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.7</summary>
+
+* LoL
+    * Fixed issue involving the `usedAbility` event when playing orianna or kled
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.6</summary>
+
+* R6
+    * Fixed `roster` event
+* Fortnite
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 213.1.5</summary>
+
+* New World
+    * Fixed `rotation` parameter in the `location` event
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.3</summary>
+
+* LoL
+    * Fixed issue involving the `usedAbility` event when playing orianna or kled
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.2</summary>
+
+* Halo
+    * Fixed an issue with the `match_outcome` event when leaving a game
+    * Fixed an issue involving `game_mode` detection
+    * Fixed an issue involving names in the `roster` event
+
+* LoL Launcher
+    * Events now comply with league ranked champion select guidelines
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.1</summary>
+
+* Halo
+    * Fixed the `game_mode` and `game_type` events
+
+</details>
+
+
+<details open>
+<summary>Version 213.1.0</summary>
+
+* Apex
+    * Added support for DX12
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.6</summary>
+
+* Axie
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.5</summary>
+
+* Halo
+    * Fixed broken events
+    * Disabled the `game_mode` and `game_type` events for maintenance
+
+* CSGO
+    * Improved event stability
+
+* Dota
+    * Improved event stability
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.4</summary>
+
+* PUBG
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.3</summary>
+
+* New World
+    * Fixed the `location` event
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.2</summary>
+
+* Dota
+    * Fixed the `role` parameter in `roster`
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.1</summary>
+
+* Dota
+    * Fixed broken events
+    * Disabled the `role` parameter in `roster` for maintenance
+
+</details>
+
+
+<details open>
+<summary>Version 213.0.0</summary>
+
+* TFT
+    * Fixed broken events
+
+* TFT PBE
+    * Fixed broken events
+
+* Apex
+    * Fixed broken events
+    * Disabled `inUse` for maintenance
+
+</details>
+
+
+<details open>
+<summary>Version 212.0.4</summary>
+
+* WoW
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 212.0.3</summary>
+
+* Fortnite
+    * Fixed broken events
+
+</details>
+
+
+<details open>
+<summary>Version 212.0.2</summary>
+
+* TFT
+    * Fixed broken events
+
+* TFT PBE
+    * Fixed broken events
+
+</details>
+
+
+
+<details open>
+<summary>Version 212.0.1</summary>
+
+* Fortnite
+    * Fixed `ping` and `mapId` events
+
+* Valorant
+    * fixed issue with `match_end` when leaving a match mid-way
+
+</details>
+
+
+<details open>
+<summary>Version 212.0.0</summary>
+
+* WoW
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 211.1.2</summary>
+
+* Fortnite
+    * Fixed broken events
+    * `ping`, `creative_map`, `map_id`, and `skirmish_data` are currently still turned off
+
+</details>
+
+<details open>
+<summary>Version 211.1.1</summary>
+
+* New world
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 211.1.0</summary>
+
+* R6
+    * New events `match_start` and `match_end`, more info [here](/api/live-game-data/supported-games/rainbow-six-siege#match_start-note) and [here](/api/live-game-data/supported-games/rainbow-six-siege#match_end-note)
+    * Added 2 new map names - `DOCKTOR'S CASTLE` and `STADIUM BRAVO`
+    * Improved `defuser_disabled` event stability
+
+</details>
+
+<details open>
+<summary>Version 211.0.0</summary>
+
+* TFT PBE
+    * Fixed `gold` and `shop_pieces` events
+
+* Dota 2
+    * Fixed issue involving `lobby_type` when launching Overwolf during pick phase
+
+</details>
+
+<details open>
+<summary>Version 210.1.7</summary>
+
+* R6
+    * Fixed `phase` event
+
+</details>
+
+<details open>
+<summary>Version 210.1.6</summary>
+
+* PUBG
+    * Temporarily disabled the `health` event for maintenance
+    * Fixed remaining broken events
+
+</details>
+
+<details open>
+<summary>Version 210.1.5</summary>
+
+* Dota 2
+    * Fixed `hero_pool` event in single draft
+    * Fixed `draft` and `bans` events in captain's mode
+
+</details>
+
+<details open>
+<summary>Version 210.1.4</summary>
+
+* Dota 2
+    * Fixed `roster` event
+
+* Halo
+    * Fixed `match_outcome` event in bot bootcamp mode
+
+</details>
+
+<details open>
+<summary>Version 210.1.2</summary>
+
+* R6
+    * Fixed `score` event
+
+</details>
+
+<details open>
+<summary>Version 210.1.1</summary>
+
+* Diablo 2
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 210.1.0</summary>
+
+* Halo
+    * Added new event `match_outcome`. More info [here](/api/live-game-data/supported-games/halo-infinite#match_outcome--note)
+
+* World of Warships
+    * Fixed `ribbon` and `kill` events
+
+</details>
+
+<details open>
+<summary>Version 210.0.3</summary>
+
+* R6
+    * Fixed issue involving `round_number`
+
+</details>
+
+<details open>
+<summary>Version 210.0.2</summary>
+
+* POE
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 210.0.1</summary>
+
+* TFT PBE
+    * Fixed broken events
+
+* World of Warships
+    * Fixed issue in replay mode
+
+</details>
+
+<details open>
+<summary>Version 210.0.0</summary>
+
+* Diablo
+    * Fixed broken events
+    * Added new event `dropped_item`. More info [here](/api/live-game-data/supported-games/diablo-2-resurrected#dropped_item-note)
+
+* Valheim
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 209.1.4</summary>
+
+* LoL
+    * Fixed broken events
+
+* Valorant
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 209.1.3</summary>
+
+* R6
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 209.1.2</summary>
+
+* TFT
+    * Fixed issue with `carousel_pieces` data
+
+</details>
+
+<details open>
+<summary>Version 209.1.1</summary>
+
+* Fortnite
+    * Fixed `mapId` field in `creative_map`
+
+* Axie
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 209.1.0</summary>
+
+* Fortnite
+    * New info update `creative-map`, containing map details in creative mode
+
+* Valorant
+    * New info update `kill_feed`
+    * New parameter `alive` in `scoreboard` info update
+
+* Pubg
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 209.0.1</summary>
+
+* TFT
+    * Fixed `battle_start` and `carousel_pieces` events
+
+</details>
+
+<details open>
+<summary>Version 209.0.0</summary>
+
+* LoL
+    * Fixed `team_frames` event
+
+* Hearthstone
+    * Fixed `match_start` and `match_end` events
+
+</details>
+
+<details open>
+<summary>Version 208.1.6</summary>
+
+* LoL
+    * Fixed `team_frames` event
+
+* PUBG
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 208.1.5</summary>
+
+* LoL
+    * Fixed `used_ability` and `ping` events
+
+* TFT
+    * Fixed broken events
+
+* Warframe
+    * Fixed broken events
+
+* R6
+    * Fixed `health` event
+
+</details>
+
+
+<details open>
+<summary>Version 208.1.4</summary>
+
+* PUBG
+    * Fixed broken events
+
+* R6
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 208.1.3</summary>
+
+* Dota
+    * Fixed `pickConfirmed` event
+
+</details>
+
+<details open>
+<summary>Version 208.1.2</summary>
+
+* World Of Tanks
+    * Fixed `match_outcome` event
+
+</details>
+
+<details open>
+<summary>Version 208.1.1</summary>
+
+* Dota
+    * Fixed broken events
+
+</details>
+   
+<details open>
+<summary>Version 208.1.0</summary>
+
+* Halo
+    * Added missing `playlist` values
+
+* Hearthstone
+    * Fixed issues involving `match_start` and `match_type`
+
+* TFT PBE
+    * Fixed broken events
+
+* Fortnite
+    * Added replay value to `phase` event
+
+</details>
+   
+<details open>
+<summary>Version 208.0.0</summary>
+
+* R6
+    * Fixed `score` event
+
+</details>
+
+<details open>
+<summary>Version 207.0.3</summary>
+
+* Halo
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 207.0.2</summary>
+
+* LoL
+    * Fixed an issue with the `totalKills` event
+
+* TFT
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 207.0.1</summary>
+
+* MTGA
+    * Fixed issue with `draft` event
+
+* Diablo 2
+    * Added new event: [`player_stats`](/api/live-game-data/supported-games/diablo-2-resurrected#player_stats-note)
+    * Added new event: [`character_name`](/api/live-game-data/supported-games/diablo-2-resurrected#character_name-note)
+
+* Apex
+    * Fixed `tabs` event
+
+</details>
+
+<details open>
+<summary>Version 206.0.0</summary>
+
+* POE
+    * Fixed broken events
+
+* Axie
+    * Fixed issues with player name data
+    * Fixed an issue where `match_start` would not fire 
+
+</details>
+
+<details open>
+<summary>Version 205.3.7</summary>
+
+* LoL
+    * Fixed `team_frames` event
+
+* WoW
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 205.3.6</summary>
+
+* Apex
+    * Fixed `damage` event
+
+* Axie
+    * Added the `ronin_address` info update
+
+* Fortnite
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 205.3.5</summary>
+
+* Apex
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 205.3.4</summary>
+
+* TFT
+    * Fixed `augments` event
+
+</details>
+
+<details open>
+<summary>Version 205.3.3</summary>
+
+* LoL
+    * Fixed broken events
+
+</details>
+
+<details open>
+<summary>Version 205.3.1</summary>
+
+* R6
+    * Fixed broken events
+
+* Halo
+    * Fixed broken events
+
+* Escape from takrov
+    * Fixed issue affecting `match_start`
+
+</details>
+
+<details open>
+<summary>Version 205.3.0</summary>
+
+* LoL
+    * Fixed false triggering of ultimate ability
+
+* Minecraft
+    * Added support for versions 1.19.1 / 1.19.2
+    * Added a new event for obtaining the current played minecraft version (more details [here](/api/live-game-data/supported-games/minecraft#mc_version-note))
+
+</details>
+
+<details open>
+<summary>Version 205.2.2</summary>
+
+* TFT PBE
+    * Fixed augments event
+
+* Axie
+    * Added `fighter_id` to `deck_pile` event
+
+* Warzone
+    * Added `assist` event
+
+</details>
+
+<details open>
+<summary>Version 205.2.1</summary>
+
+* Dota
+    * Fixed broken events
+
+* Axie
+    * Fixed crash
+    * Fixed freeze
+
+</details>
+
+<details open>
+<summary>Version 205.2.0</summary>
+
+* Fortnite
+    * Add GEP support in creative mode
+
+* Axie
+    * Fixed crash
+    * Fixed json format
+
+* R6
+    * Support new map M.U.T.E COMM TOWER
+
+</details>
+
+<details open>
+<summary>Version 205.1.5</summary>
+
+* Apex
+    * Fixed weapon event
+    * Damage event is still broken
+* Axie
+    * Fixed crash
+    * Added missing data about fighters to APIs
+
+</details>
+
+<details open>
+<summary>Version 205.1.4</summary>
+
+* Apex
+    * Fixed broken events
+    * Damage and weapon events are still broken
+    
+</details>
+
+<details open>
+<summary>Version 205.1.3</summary>
+
+* TFT PBE
+    * Fixed broken events
+
+* Diablo
+    * Fixed issue with spawn and player died events firing twice
+    * Fixed Crash issues
+    
+</details>
+        

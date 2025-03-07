@@ -1,0 +1,40 @@
+{
+  "name": "overwolf-github-io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "yarn tsc --project tsconfig.build.json",
+    "compile:dev": "yarn tsc --project tsconfig.build.json --watch",
+    "bootstrap": "yarn compile && node lib/bootstrap/bootstrap.js",
+    "bootstrap:dev": "node lib/bootstrap/bootstrap.js",
+    "update": "yarn && yarn workspace engine compile",
+    "start": "yarn bootstrap && yarn workspace engine start",
+    "deploy": "yarn bootstrap && yarn workspace engine deploy",
+    "build": "yarn bootstrap && yarn workspace engine build",
+    "serve": "yarn workspace engine serve",
+    "clear": "yarn bootstrap && node lib/bootstrap/clear.js && yarn workspace engine clear",
+    "write-translations": "yarn workspace engine write-translations",
+    "write-heading-ids": "yarn workspace engine write-heading-ids"
+  },
+  "workspaces": [
+    "engine"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overwolf/overwolf.github.io.git"
+  },
+  "private": true,
+  "author": "Overwolf Ltd.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/overwolf/overwolf.github.io/issues"
+  },
+  "homepage": "https://github.com/overwolf/overwolf.github.io#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "type": "commonjs",
+  "resolutions": {
+    "@docusaurus/plugin-content-docs@2.2.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.2.0#./engine/patches/@docusaurus-plugin-content-docs-npm-2.2.0-34ac512661.patch"
+  }
+}

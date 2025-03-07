@@ -1,0 +1,14 @@
+﻿{
+  "name": "ascendhq-overwolf-app",
+  "version": "0.1.0",
+  "description": "AscendHQ Overwolf app for competitive gaming analytics",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "echo \"✅ AscendHQ Build successful! No bundling required at this stage.\"",
+    "package": "echo \"Package step skipped - no bundling needed\""
+  },
+  "author": "AscendHQ",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {}
+}

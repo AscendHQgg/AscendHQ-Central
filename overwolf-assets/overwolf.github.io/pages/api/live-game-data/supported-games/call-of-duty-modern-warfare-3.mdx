@@ -1,0 +1,128 @@
+---
+id: call-of-duty-modern-warfare-3
+image: "/img/embed/games/call-of-duty-modern-warfare-3.jpg"
+title: "Call of Duty: Modern Warfare 3 Game events"
+hide_title: true
+sidebar_label: "Call of Duty: Modern Warfare 3"
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Call of Duty: Modern Warfare 3, Call of Duty: Modern Warfare 3 API, SDK for Call of Duty: Modern Warfare 3, Call of Duty: Modern Warfare 3 SDK"/>
+  <meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/reference/live-game-data-gep/supported-games/call-of-duty-modern-warfare-3" />
+</head>
+
+<GameInfo gameId={23424} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+:::warning
+
+* Support for these events is for 16:9 and 16:10 screen resolutions, the game window must be visible and should run with native screen resolution in fullscreen or fullscreen borderless. 
+
+* This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](/topics/best-practices/exclusive-mode).
+
+* In addition, when developing your app, you must comply with Activision’s Call of Duty: Modern Warfare 3 terms and conditions. Supporting queue dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
+
+For more information check our [Game compliance principles](/start/getting-started/game-compliance)
+
+:::
+
+## Sample Apps
+* [Modern Warfare 3 game events sample app](https://github.com/overwolf/events-sample-app)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+* [game_info](#game_info)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternatively, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## gep_internal
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   198.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"198.0.0","public_version":"198.0.0","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## match_info
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+match_start  | null              | Match started.| See [notes](#match_start-note)     | 239.0 |
+match_end    | null              | Match ended and also data about the match outcome. | See [notes](#match_end-note)        | 239.0 |
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":null}]}
+```
+
+#### *match_end* note
+
+Match end event includes the match outcome
+
+Possible values:
+* victory
+* defeat
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":victory}]}
+```
+
+## game_info
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene| game_info   | current player's scene. |See [notes](#scene-note)|   198.0       |
+mode| game_info   | current game mode selected by the player. |See [notes](#mode-note)|   239.0       |
+
+#### *scene* note
+
+Possible values:
+* lobby_mw3
+* in_game
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"in_game"}
+```
+
+#### *mode* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"mode","value":"mw3"}
+```
+

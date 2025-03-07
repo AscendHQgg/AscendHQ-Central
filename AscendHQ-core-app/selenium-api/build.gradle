@@ -1,0 +1,41 @@
+apply plugin: 'java'
+
+def gitCommitHash = 'git rev-parse --verify --short HEAD'.execute().text.trim()
+version = '0.8.0.manheim-' + gitCommitHash
+group = 'com.xing.qa'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+dependencies {
+    provided 'org.seleniumhq.selenium:selenium-server:3.141.59'
+    compile 'org.json:json:20080701'
+    testCompile 'org.testng:testng:6.8.8'
+}
+
+jar {
+    dependsOn configurations.runtime
+    from {
+        (configurations.runtime - configurations.provided).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip";
+}

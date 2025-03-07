@@ -1,0 +1,224 @@
+
+@import './colors';
+@import './icons';
+
+*,
+*:before,
+*:after {
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	border: none;
+}
+
+main,
+header,
+footer,
+nav,
+input,
+button,
+textarea,
+select {
+	display: block
+}
+
+strong,
+b {
+	font-weight: 700
+}
+
+em,
+i {
+	font-style: italic
+}
+
+input[type=submit],
+button {
+	appearance: none;
+	cursor: pointer;
+	text-align: left
+}
+
+textarea {
+	resize: none
+}
+
+symbol,
+use,
+svg {
+	overflow: visible
+}
+
+svg {
+	display: block;
+	user-select: none
+}
+
+svg use {
+	pointer-events: none
+}
+
+img {
+	display: block;
+	user-select: none
+}
+
+a, button {
+	&:focus-visible {
+		box-shadow: inset 0 0 0 1px var(--color-text-primary);
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+  &.external-icon {
+
+    svg {
+      display: inline;
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+      position: relative;
+      bottom: -3px;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: var(--font-family-brand);
+  color: var(--color-text-pure);
+	letter-spacing: var(--font-letter-spacing-default);
+}
+
+[hidden] {
+	display: none !important
+}
+
+::-moz-focus-inner {
+	padding: 0;
+	border: 0
+}
+
+:not(.navigation-with-keyboard){
+	&:focus {
+		outline: 0
+	}
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 1
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: consolas, monospace
+}
+
+html {
+	position: relative;
+	overflow-y: scroll;
+  scroll-padding-top: 40px;
+  height: auto !important;
+  //scroll-behavior: smooth; not works well in inner pages
+}
+
+body {
+	background-color: var(--color-surface-pure);
+	font-family: var(--font-family-default);
+	color: var(--color-text-secondary);
+	font-size: var(--font-size-400);
+	font-weight: var(--font-weight-regular);
+	line-height: var(--font-line-height-600);
+	letter-spacing: var(--font-letter-spacing-default);
+  height: auto;
+}
+
+.tabs li:before{
+	content: none;
+}
+
+.btn-primary, .btn-secondary, a.btn-primary, a.btn-secondary, a.theme-edit-this-page  {
+	font-family: var(--font-family-brand);
+  border: none;
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-400) var(--space-800);
+  font-size: var(--font-size-400);
+  height: 48px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-regular);
+	text-decoration: none !important;
+	min-width: 160px;
+	text-align: center;
+}
+
+.btn-primary, a.btn-primary {
+  color: var(--color-text-cta-ow);
+  background-color: var(--color-surface-brand-ow);
+	line-height: 18px;
+
+  &:hover {
+    background-color: var(--color-hover-brand-ow);
+		color: var(--color-text-cta-ow);
+  }
+
+  &.has-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+		line-height: 25px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.btn-secondary, a.btn-secondary, a.theme-edit-this-page {
+	border: 1px solid var(--color-border-primary);
+  color: var(--color-text-primary);
+  background-color: transparent;
+	line-height: 16px;
+
+  &:hover {
+		background-color: var(--color-hover-brand-ow);
+    border-color: var(--color-hover-brand-ow);
+    color: var(--color-text-cta-ow);
+  }
+
+	&.small {
+		padding: 16px var(--space-600, 24px);
+		height: 40px;
+		text-transform: none;
+		line-height: 7px;
+	}
+
+}
+
+.underline-patch a {
+	text-decoration-color: initial;
+}
+
+.desktop-only {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+@import './components/sidebar';
+@import './components/navbar';
+@import './components/search-box';
+@import './components/admonition';
+@import './components/content';
+@import './overide';
+

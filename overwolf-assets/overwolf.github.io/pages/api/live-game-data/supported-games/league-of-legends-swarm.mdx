@@ -1,0 +1,1263 @@
+---
+id: league-of-legends-swarm
+image: "/img/embed/games/league-of-legends-swarm.jpg"
+title: "League of Legends: Swarm Game events"
+hide_title: true
+sidebar_label: "League of Legends: Swarm"
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for League of Legends Swarm, League of Legends Swarm API, SDK for League of Legends Swarm, League of Legends Swarm SDK"/>
+  <meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/reference/live-game-data-gep/supported-games/league-of-legends-swarm" />
+</head>
+
+<GameInfo gameId={13956} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+**Note** that LOL Swarm, LOL Swarm PBE and LOL share the same Game ID.
+
+:::tip
+Note that you can also use the LOL game launcher events. Read more [here](/api/live-game-data/supported-launchers/league-of-legends).
+:::
+
+## Sample Apps
+
+* [LOL Swarm game events sample app](https://github.com/overwolf/events-sample-app)
+
+<SkipMe>
+* [Summoner and team info sample app](https://github.com/overwolf/lol-summoner-team-info-sample-app) – this sample app gets “summoner region” and “my team” info during the champion selection phase, before the game begins. More information about getting data from LoL launcher/client can be found [here](/api/games/launchers).
+</SkipMe>
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [live_client_data](#live_client_data)
+* [matchState](#matchstate)
+* [match_info](#match_info)
+* [summoner_info](#summoner_info)
+* [teams](#teams)
+* [match](#match)
+* [minions](#minions)
+* [damage](#damage)
+* [death](#death) 
+* [respawn](#respawn)
+* [abilities](#abilities)
+* [counters](#counters)
+* [team_frames](#team_frames)
+* [chat](#chat)
+
+
+## Game events status
+
+It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](/status/) or easily check game event status from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+:::important
+Because LOL and LOL Swarm share the same GameID, when checking LOL Swarms game event status please use 13956 as the unique GameID for LOL Swarm.
+:::
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   257.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `live_client_data`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+active_player | live_client_data | In-game data received by the client. |See [notes](#active_player-note)|   257.0    |
+all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   257.0    |
+events | live_client_data | In-game data received by the client. |See [notes](#events-note)|  257.0   |
+game_data | live_client_data | In-game data received by the client. |See [notes](#game_data-note)|   257.0   |
+
+#### *active_player* note
+
+<details>
+<summary>Click to see some data example</summary>
+
+```json
+{
+  "info": {
+    "live_client_data": {
+      "active_player": {
+        "abilities": {
+          "E": {
+            "abilityLevel": 0,
+            "displayName": "Stacked Deck",
+            "id": "CardmasterStack",
+            "rawDescription": "GeneratedTip_Spell_CardmasterStack_Description",
+            "rawDisplayName": "GeneratedTip_Spell_CardmasterStack_DisplayName"
+          },
+          "Passive": {
+            "displayName": "Loaded Dice",
+            "id": "SecondSight",
+            "rawDescription": "GeneratedTip_Passive_SecondSight_Description",
+            "rawDisplayName": "GeneratedTip_Passive_SecondSight_DisplayName"
+          },
+          "Q": {
+            "abilityLevel": 0,
+            "displayName": "Wild Cards",
+            "id": "WildCards",
+            "rawDescription": "GeneratedTip_Spell_WildCards_Description",
+            "rawDisplayName": "GeneratedTip_Spell_WildCards_DisplayName"
+          },
+          "R": {
+            "abilityLevel": 0,
+            "displayName": "Destiny",
+            "id": "Destiny",
+            "rawDescription": "GeneratedTip_Spell_Destiny_Description",
+            "rawDisplayName": "GeneratedTip_Spell_Destiny_DisplayName"
+          },
+          "W": {
+            "abilityLevel": 0,
+            "displayName": "Pick a Card",
+            "id": "PickACard",
+            "rawDescription": "GeneratedTip_Spell_PickACard_Description",
+            "rawDisplayName": "GeneratedTip_Spell_PickACard_DisplayName"
+          }
+        },
+        "championStats": {
+          "abilityHaste": 0,
+          "abilityPower": 0,
+          "armor": 21,
+          "armorPenetrationFlat": 0,
+          "armorPenetrationPercent": 1,
+          "attackDamage": 25,
+          "attackRange": 0,
+          "attackSpeed": 0.6510000228881836,
+          "bonusArmorPenetrationPercent": 1,
+          "bonusMagicPenetrationPercent": 1,
+          "cooldownReduction": 0,
+          "critChance": 0,
+          "critDamage": 0,
+          "currentHealth": 534,
+          "healthRegenRate": 0,
+          "lifeSteal": 0,
+          "magicLethality": 0,
+          "magicPenetrationFlat": 0,
+          "magicPenetrationPercent": 1,
+          "magicResist": 30,
+          "maxHealth": 534,
+          "moveSpeed": 330,
+          "physicalLethality": 0,
+          "resourceMax": 333,
+          "resourceRegenRate": 0,
+          "resourceType": "MANA",
+          "resourceValue": 333,
+          "spellVamp": 0,
+          "tenacity": 0
+        },
+        "currentGold": 0,
+        "fullRunes": {
+          "generalRunes": [
+            {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            {
+              "displayName": "Taste of Blood",
+              "id": 8139,
+              "rawDescription": "perk_tooltip_TasteOfBlood",
+              "rawDisplayName": "perk_displayname_TasteOfBlood"
+            },
+            {
+              "displayName": "Eyeball Collection",
+              "id": 8138,
+              "rawDescription": "perk_tooltip_EyeballCollection",
+              "rawDisplayName": "perk_displayname_EyeballCollection"
+            },
+            {
+              "displayName": "Ravenous Hunter",
+              "id": 8135,
+              "rawDescription": "perk_tooltip_RavenousHunter",
+              "rawDisplayName": "perk_displayname_RavenousHunter"
+            },
+            {
+              "displayName": "Presence of Mind",
+              "id": 8009,
+              "rawDescription": "perk_tooltip_PresenceOfMind",
+              "rawDisplayName": "perk_displayname_PresenceOfMind"
+            },
+            {
+              "displayName": "Coup de Grace",
+              "id": 8014,
+              "rawDescription": "perk_tooltip_CoupDeGrace",
+              "rawDisplayName": "perk_displayname_CoupDeGrace"
+            }
+          ],
+          "keystone": {
+            "displayName": "Dark Harvest",
+            "id": 8128,
+            "rawDescription": "perk_tooltip_DarkHarvest",
+            "rawDisplayName": "perk_displayname_DarkHarvest"
+          },
+          "primaryRuneTree": {
+            "displayName": "Domination",
+            "id": 8100,
+            "rawDescription": "perkstyle_tooltip_7200",
+            "rawDisplayName": "perkstyle_displayname_7200"
+          },
+          "secondaryRuneTree": {
+            "displayName": "Precision",
+            "id": 8000,
+            "rawDescription": "perkstyle_tooltip_7201",
+            "rawDisplayName": "perkstyle_displayname_7201"
+          },
+          "statRunes": [
+            { "id": 5008, "rawDescription": "perk_tooltip_StatModAdaptive" },
+            { "id": 5008, "rawDescription": "perk_tooltip_StatModAdaptive" },
+            { "id": 5003, "rawDescription": "perk_tooltip_StatModMagicResist" }
+          ]
+        },
+        "level": 1,
+        "summonerName": "Sh4rgaas"
+      }
+    }
+  },
+  "feature": "live_client_data"
+}
+```
+</details>
+
+#### *all_players* note
+
+
+<details>
+<summary>Click to see some data example</summary>
+
+```json
+{
+  "info": {
+    "live_client_data": {
+      "all_players": [
+        {
+          "championName": "Twisted Fate",
+          "isBot": false,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": true,
+              "consumable": true,
+              "count": 1,
+              "displayName": "Poro - Snax",
+              "itemID": 2052,
+              "price": 0,
+              "rawDescription": "game_item_description_2052",
+              "rawDisplayName": "game_item_displayname_2052",
+              "slot": 6
+            }
+          ],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_TwistedFate",
+          "rawSkinName": "game_character_skin_displayname_TwistedFate_9",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 9,
+          "skinName": "Cutpurse Twisted Fate",
+          "summonerName": "Sh4rgaas",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Ghost",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Brand",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Brand",
+          "rawSkinName": "game_character_skin_displayname_Brand_2",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 2,
+          "skinName": "Vandal Brand",
+          "summonerName": "Gordon xD",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Heal",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Gragas",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Gragas",
+          "rawSkinName": "game_character_skin_displayname_Gragas_10",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 10,
+          "skinName": "Arctic Ops Gragas",
+          "summonerName": "IM Piotrovic",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Ignite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Shen",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Shen",
+          "rawSkinName": "game_character_skin_displayname_Shen_6",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Hail of Blades",
+              "id": 9923,
+              "rawDescription": "perk_tooltip_HailOfBlades",
+              "rawDisplayName": "perk_displayname_HailOfBlades"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 6,
+          "skinName": "TPA Shen",
+          "summonerName": "ToxicMolester",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Clarity",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerMana_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerMana_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Vayne",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Vayne",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Hail of Blades",
+              "id": 9923,
+              "rawDescription": "perk_tooltip_HailOfBlades",
+              "rawDisplayName": "perk_displayname_HailOfBlades"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "ToxikBull",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Pantheon",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Pantheon",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "Haorn",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Rell",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Rell",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Aftershock",
+              "id": 8439,
+              "rawDescription": "perk_tooltip_VeteranAftershock",
+              "rawDisplayName": "perk_displayname_VeteranAftershock"
+            },
+            "primaryRuneTree": {
+              "displayName": "Resolve",
+              "id": 8400,
+              "rawDescription": "perkstyle_tooltip_7204",
+              "rawDisplayName": "perkstyle_displayname_7204"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "Tαkumi Usui",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Anivia",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Anivia",
+          "rawSkinName": "game_character_skin_displayname_Anivia_8",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 8,
+          "skinName": "Papercraft Anivia",
+          "summonerName": "TheShackledCaps",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Jhin",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Jhin",
+          "rawSkinName": "game_character_skin_displayname_Jhin_3",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 3,
+          "skinName": "SKT T1 Jhin",
+          "summonerName": "SzczodryMarynarz",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Lissandra",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Lissandra",
+          "rawSkinName": "game_character_skin_displayname_Lissandra_3",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 3,
+          "skinName": "Program Lissandra",
+          "summonerName": "JALLLAA",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        }
+      ]
+    }
+  },
+  "feature": "live_client_data"
+}
+```
+
+</details>
+
+
+#### *events* note
+
+Data Example:
+
+```json
+{"info":{"live_client_data":{"events":"{"Events":[{"EventID":0,"EventName":"GameStart","EventTime":0.0417339988052845}]}"}},"feature":"live_client_data"}
+```
+
+#### *game_data* note
+
+Data Example:
+
+```json
+{
+  "info": {
+    "live_client_data": {
+      "game_data": {
+        "gameMode": "ARAM",
+        "gameTime": 0.0417339988052845,
+        "mapName": "Map12",
+        "mapNumber": 12,
+        "mapTerrain": "Default"
+      }
+    }
+  },
+  "feature": "live_client_data"
+}
+```
+
+## `matchState`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   257.0        |
+matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   257.0       |
+
+
+#### *matchStarted* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"matchStarted":"true"}},"feature":"matchState"}
+```
+
+#### *matchID* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"matchId":"2603009084"}},"feature":"game_info"}
+```
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+matchStart | null        | Match has started   |  Match has started |  257.0       |
+
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ----------- | ------------------------- | --------------------- | -------------- |
+game_mode | match_info | Whether the current game mode is Swarm, TFT, Arena or default LoL. See [notes](#game_mode-notes) |                 |   257.0       |
+players_tagline | match_info | Information about the players in the game. See [notes](#players_tagline-notes) |                 |   257.0      |
+
+### Events
+
+
+## `summoner_info`
+
+### Info Updates
+
+key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
+----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
+id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start. See [notes](#id-note) |      257.0      |
+region    | summoner_info   | User’s region (EUE, EUW, etc.) or PBE client (See notes)             |    See [notes](#region-note)|    257.0       |
+level     | summoner_info   | User’s summoner level                      |  See [notes](#level-note) |    257.0       |
+accountId | summoner_info   | User’s account id                           | See [notes](#accountId-note) |    257.0      |
+
+#### *id* note
+
+Data Example:
+
+```json
+{"info":{"summoner_info":{"id":"21549264"}},"feature":summoner_info}
+```
+
+#### *region* note
+
+For a full list of regions and Riot Games Servers please visit [here](https://leagueoflegends.fandom.com/wiki/Servers).
+
+Data Example:
+
+```json
+{"info":{"summoner_info":{"region":"EUNE"}},"feature":summoner_info}
+```
+
+Note that if the current client is a PBE client, instead of the region value, it returns "PBE":
+
+```json
+{"info":{"summoner_info":{"region":"PBE"}},"feature":summoner_info}
+
+```
+
+Note that you can also get this info earlier by using the [LEP region info-update](/api/live-game-data/supported-launchers/league-of-legends#summoner_info).
+
+#### *level* note
+
+Data Example:
+
+```json
+{"info":{"summoner_info":{"level":"39"}},"feature":summoner_info}
+```
+
+#### *accountId* note
+
+Data Example:
+
+```json
+{"info":{"summoner_info":{"accountId":"25112115"}},"feature":summoner_info}
+```
+
+## `teams`
+
+### Info Updates
+
+key         | Category    | Values                                                                                | Notes                 | Since GEP Ver. |
+----------- | ------------| --------------------------------------------------------------------------------------| --------------------- | ------------- |
+teams       | game_info   |  A URI – a decoded string that represents a JSON object with the team's formation        |   See [notes](#teams-note)                  |  257.0       |
+
+
+#### *teams* note
+
+The info-update JSON response will return the following parameters:
+
+* team - a random team number
+* players - an array of players
+  * name - the player name with tagline
+  * is_local - true/false to identify the local player
+
+```json
+"feature":"teams","category":"game_info","key":"teams","value":"[{"team":"Order","champion":"Strawberry_Jinx","skinId":"0","summoner":"overwolf#EUW"}]"}```
+```
+
+## `match`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+match_started | game_info  | Match has started |See [notes](#match_started-note)|   257.0       |
+
+
+### Events
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+match_start |                | match start event | See [notes](#match_start-note)|   257.0       |
+
+
+#### *match_started* note
+
+Data Example:
+```
+{"feature":"match","category":"game_info","key":"match_started","value":true}
+```
+
+#### *match_start* note
+
+Data Example:
+```
+{"events":[{"name":"match_start","data":""}]}
+```
+## `minions`
+
+### Info Updates
+
+key                | Category    | Values                                         | Notes  | Since GEP Ver. |
+-------------------| ------------| -----------------------------------------------| ------ | ------------- |
+minionKills        | game_info   | amount of of mobs killed by the player   |See [notes](#minionKills-note)|    257.0       |
+
+#### *minionKills* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"minionKills":"37"}},"feature":"minions"}
+```
+
+## `damage`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+total_damage_dealt               | damage | Value of all damage done in the match (Float). |See [notes](#total_damage_dealt-note)|    257.0     |
+total_damage_dealt_to_champions  | damage | Value of all damage done to champions in the match (Float). |See [notes](#total_damage_dealt_to_champions-note)|    257.0      |
+total_damage_taken               | damage | Value of all the damage that was taken in the match (Float). |See [notes](#total_damage_taken-note)|    257.0     | |
+total_damage_self_mitigated      | damage | Value of all mitigated damage in the match (Float). |See [notes](#total_damage_self_mitigated-note)|    257.0      |
+
+#### *total_damage_dealt* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_champions":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_taken* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_taken":"8.452381"}},"feature":"damage"}
+```
+
+#### *total_damage_self_mitigated* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_self_mitigated":"62.607620"}},"feature":"damage"}
+```
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+physical_damage_dealt_player       | Float | Damaging an opponent with physical damage. |See [notes](#physical_damage_dealt_player-note)|      257.0    |
+magic_damage_dealt_player          | Float | Damaging an opponent with magic damage. |See [notes](#magic_damage_dealt_player-note)|      257.0    |
+true_damage_dealt_player           | Float | Damaging an opponent with true damage. |See [notes](#true_damage_dealt_player-note)|      257.0    |
+physical_damage_dealt_to_champions | Float | Physical damage is inflicted on any opponent. |See [notes](#physical_damage_dealt_to_champions-note)|      257.0    |
+magic_damage_dealt_to_champions    | Float | Magic damage is inflicted on any opponent. |See [notes](#magic_damage_dealt_to_champions-note)|      257.0    |
+true_damage_dealt_to_champions     | Float | True damage is inflicted on any opponent. |See [notes](#true_damage_dealt_to_champions-note)|      257.0    |
+physical_damage_taken              | Float | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      257.0    |
+magic_damage_taken                 | Float | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      257.0    |
+true_damage_taken                  | Float | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      257.0    |
+
+#### *physical_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_player","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_player","data":"65.0"}]}
+```
+
+#### *true_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_player","data":"14.0"}]}
+```
+
+#### *physical_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_to_champions","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_to_champions","data":"65.0"}]}
+```
+
+#### *true_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_to_champions","data":"14.0"}]}
+```
+
+#### *physical_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_taken","data":"8.452381"}]}
+```
+
+#### *magic_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_taken","data":"11.355035"}]}
+```
+
+#### *true_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_taken","data":"6.0"}]}
+```
+## `death`
+
+### Info Updates
+
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
+------------ | ------------| --------------------------------- | --------------------- | ------------- |
+deaths       | game_info   | Number of deaths for this session |See [notes](#deaths-note)|   257.0        |
+
+#### *deaths* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"deaths":"1"}},"feature":"death"}
+```
+
+### Events
+
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+death | Number of deaths for this session | The player’s champion died  | See [notes](#death-note) |     257.0      |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"{"count":"1"}"}]}
+```
+
+## `abilities`
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------------------- | ------------------ | --------------|
+usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:<br></br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player activated the ability  |   0.31       |
+
+#### *usedAbility* note
+
+Data Example:
+
+```json
+{"events":[{"name":"usedAbility","data":"{  "type": "1"}"}]}
+{"events":[{"name":"usedAbility","data":"{  "type": "2"}"}]}
+{"events":[{"name":"usedAbility","data":"{  "type": "3"}"}]}
+{"events":[{"name":"usedAbility","data":"{  "type": "4"}"}]}
+```
+
+## `respawn`
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------------------- | ------------------ | --------------|
+respawn    | null        | The player’s champion respawned | See [notes](#respawn-notes) |   257.0       |
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":"{}"}]}
+```
+
+## `counters`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+ping | performance | The change in latency values of the local player  |See [notes](#ping-note)|   257.0      |
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+match_clock | The exact time in the match in seconds (Including augments selection). | Every second that the clock is ticking. |See [notes](#match_clock-note)|      257.0    |
+
+#### *ping* note
+
+Data Example:
+
+```json
+{"info":{"performance":{"ping":"77"}},"feature":"counters"}
+```
+
+#### *match_clock* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_clock","data":"1249"}]}
+```
+## `team_frames`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+team_frames_x | game_info | Cooldown timer of the ultimate of the players in seconds. |See [notes](#team_frames)|    257.0      |
+
+#### *team_frames* note:
+
+This info update shows the cooldown timer of the ultimate ability of each player in seconds.<br></br>
+Value in "team_frames_0" is the player to the left until "team_frames_3" to the last player to the right.<br></br>
+The value in ult_cd stands for ultimate cooldown in seconds.
+
+```json
+{"info":{"game_info":{"team_frames_1":"{\"ult_cd\":47}"}},"feature":"team_frames"}
+```
+
+## `chat`
+
+<MatchOnly/>
+
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+chat | All the chat messages sent in a match | Every time there is a new message in the chat |See [notes](#chat-note)|      257.0    |
+
+#### *chat* note
+
+Data Example:
+
+```json
+{"events":[{"name":"chat","data":"[Team] Jacksork (Lux): Hello "}]}
+```

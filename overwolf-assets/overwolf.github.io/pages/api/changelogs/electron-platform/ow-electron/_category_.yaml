@@ -1,0 +1,7 @@
+label: 'ow-electron'
+collapsed: false
+customProps:
+  sort:
+    main: numerically
+    reverse: false
+    strict: true

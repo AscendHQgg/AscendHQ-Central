@@ -1,0 +1,859 @@
+---
+id: valorant
+image: "/img/embed/games/valorant.jpg"
+title: Valorant Game events
+hide_title: true
+sidebar_label: Valorant
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Valorant, Valorant API, SDK for Valorant, Valorant SDK"/>
+   <meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/reference/live-game-data-gep/supported-games/valorant" />
+</head>
+
+<GameInfo gameId={21640} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [VALORANT game events sample app](https://github.com/overwolf/events-sample-app)
+
+## Available Features
+
+
+* [gep_internal](#gep_internal)
+* [me](#me)
+* [game_info](#game_info)
+* [match_info](#match_info)
+* [kill](#kill)
+* [death](#death)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternatively, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `me`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+player_name  | me          | Name of local player.     |See [notes](#player_name-note)|   148.0       |
+player_id    | me          | ID of the local player.   |See [notes](#player_id-note)|   148.0       |
+region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
+agent        | me          | Character Internal ID.       |See [notes](#agent-note)|   149.0       |
+health        | me          | Character current health.       |See [notes](#health-note)|   238.0       |
+abilities    | me  | Current available abilities |See [notes](#abilities-note)|   239.0       |
+server    | me  | Server of the local player. |See [notes](#server-note)|   257.0       |
+
+
+#### *player_name* note
+
+Data Example:
+
+```json
+{"info":{"me":{"player_name":"Doom#5339"}},"feature":"me"}
+```
+
+#### *player_id* note
+
+Data Example:
+
+```json
+{"info":{"me":{"player_id":"f4029eff-92e6-56db-adba-4d073df968a4"}},"feature":"me"}
+```
+
+#### *region* note
+
+Data Example:
+
+```json
+{"info":{"me":{"region":"esp"}},"feature":"me"}
+```
+
+#### *agent* note
+
+Not all agents have their game name match their ID data, since this is an internal name, so take that into account.
+Furthermore, if a character has an ability that gives him different points of view (e.g. Sova with his drone), the ID will change accordingly to the drone.
+
+Possible agent values:
+
+* "Clay_PC_C" = Raze
+* "Pandemic_PC_C" = Viper
+* "Wraith_PC_C" = Omen
+* "Hunter_PC_C" = Sova
+* "Thorne_PC_C" = Sage
+* "Phoenix_PC_C" = Phoenix
+* "Wushu_PC_C" = Jett
+* "Gumshoe_PC_C" = Cypher
+* "Sarge_PC_C" = Brimstone
+* "Breach_PC_C" = Breach
+* "Vampire_PC_C" = Reyna
+* "Killjoy_PC_C" = Killjoy
+* "Guide_PC_C" = Skye
+* "Stealth_PC_C" = Yoru
+* "Rift_PC_C" = Astra
+* "Grenadier_PC_C" = KAY/O
+* "Deadeye_PC_C" = Chamber
+* "Sprinter_PC_C" = Neon
+* "BountyHunter_PC_C" = Fade
+* "Mage_PC_C" = Harbor
+* "AggroBot_PC_C" = Gekko
+* "Cable_PC_C" = Deadlock
+* "Sequoia_PC_C" = Iso
+* "Smonk_PC_C" = Clove
+
+Data Example:
+
+```json
+{"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
+```
+
+#### *health* note
+
+Data Example:
+
+```json
+{"feature": "me", "category": "me", "key": "health", "data": "100"}
+```
+
+#### *abilities* note
+
+Data Example:
+
+```json
+{"feature": "me", "category": "me", "key": "abilities", "data": "{\"C\":true,\"Q\":true,\"E\":true,\"X\":false}"}
+```
+
+#### *server* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"me","key":"server","value":"eu"}
+```
+
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+pseudo_match_id | match_info | The current match’s ID code.<br></br><br></br>Example:<br></br><br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Riot.  |   159.0 |
+round_number | match_info  | Number of current round.  |See [notes](#round_number-note)|   149.0       |
+score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
+match_score        | match_info  | Match score by teams|See [notes](#match_score-note)|   258.0       |
+round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
+team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
+match_outcome| match_info  | victory/defeat/draw.      |See [notes](#match_outcome-note)|   149.0       |
+round_report | match_info  | * Total Damage<br></br>* Total number of bullets hit.<br></br>* Number of bullets hit on head.<br></br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
+game_mode    | match_info  |The current played mode and whether or not it is ranked/custom|See [notes](#game_mode-note)|   151.0       |
+roster    | match_info  | * Player Name<br></br>* Player ID<br></br>* Name of picked character<br></br>* Player's Rank<br></br>* Whether it is the local player<br></br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
+scoreboard    | match_info  | Scoreboard changes and updates during the game |See [notes](#scoreboard-note)|   151.0       |
+kill_feed    | match_info  | kill feed updates during the game |See [notes](#kill_feed-note)|   209.0       |
+map    | match_info  | Current played map name |See [notes](#map-note)|   217.0       |
+escalation_stage    | match_info  | Each team's currnt weapon stage in Escalation game mode. |See [notes](#escalation_stage-note)|   250.0       |
+observing    | match_info  | The name of the palyer you are observing or coach (In custom mode only) |See [notes](#observing-note)|   257.0       |
+
+#### *round_number* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_number":"1"}},"feature":"match_info"}
+{"info":{"match_info":{"round_number":"2"}},"feature":"match_info"}
+{"info":{"match_info":{"round_number":"3"}},"feature":"match_info"}
+```
+
+#### *score* note
+
+Data example:
+
+```json
+{"info":{"match_info":{"score":"{"won":9,"lost":2}"}},"feature":"match_info"}
+```
+
+#### *match_score* note
+
+Data example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"match_score","value":"{\"team_0\":0,\"team_1\":2}"}
+```
+
+#### *round_phase* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_phase":"shopping"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"combat"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"end"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"game_end"}},"feature":"match_info"}
+```
+
+#### *team* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"team":"attack"}},"feature":"match_info"}
+{"info":{"match_info":{"team":"defense"}},"feature":"match_info"}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"draw"}},"feature":"match_info"}
+```
+
+#### *round_report* note
+
+This data is <b>per round</b>.
+
+List of parameters:
+
+* damage - total damage dealt by the player
+* hit - number of total hits
+* headshot - number of headshots that did not kill an enemy
+* bodyshots - number of body shots
+* legshots - number of leg shots
+* final_headshot - number of headshots that did kill an enemy
+* damage_received - total damage the local player received
+* hits_received - total hits the local player received
+* ability_damage - total damage done by the use of an ability
+
+Data Example:
+
+```json
+{"match_info": {"round_report": "\"damage\":326.3,\"hit\":9,\"headshot\":1,\"bodyshots\":\"4\",\"legshots\":\"3\",\"final_headshot\":1,\"damage_received\":\"0\",\"hits_received\":\"0\",\"ability_damage\":\"0\"}"}}
+```
+
+#### *game_mode* note
+
+List of parameters:
+
+**mode-** 
+
+* Bomb = Regular game (Unrated/Competitive)
+* Quick Bomb = Spike Rush
+* Deathmatch = Deathmatch
+* Escalation = Escalation
+* Swift = Swiftplay
+* Range = Range 
+* Team deathmatch = team_deathmatch
+
+**custom -** true/false 
+
+**ranked -** 
+* 1 = Competitive  
+* 2 = Any other mode 
+
+Data Example:
+
+```json
+{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":true,"ranked":"0"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":false,"ranked":"1"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"mode":"deathmatch","custom":false,"ranked":"2"}"}},"feature":"match_info"}
+```
+
+#### *roster* note
+
+<b>*Important:*</b> If players (or the local player) in the match activate the option to hide their names from players outside their party, the output you will see will be the name of the agent (like `Jett` or in the case of the local player it will be `Me`) instead.
+It is language-dependent, so that is also important to take into account.
+
+<b>*Important:*</b> Roster is not supported in game mode "escalation" 
+
+<details open>
+<summary>Rank value in the roster can be translated using this list (Apr. 2022)</summary>
+
+* 0 - Unranked
+* 3 - Iron_01
+* 4 - Iron_02
+* 5 - Iron_03
+* 6 - Bronze_01  
+* 7 - Bronze_02
+* 8 - Bronze_03
+* 9 - Silver_01
+* 10 - Silver_02
+* 11 - Silver_03
+* 12 - Gold_01
+* 13 - Gold_02
+* 14 - Gold_03
+* 15 - Platinum_01
+* 16 - Platinum_02
+* 17 - Platinum_03
+* 18 - Diamond_01
+* 19 - Diamond_02
+* 20 - Diamond_03
+* 21 - Ascendant_1
+* 22 - Ascendant_2
+* 23 - Ascendant_3
+* 24 - Immortal_01
+* 25 - Immortal_02
+* 26 - Immortal_03
+* 27 - Radiant
+
+</details>
+
+Data Example:
+
+```json
+{"info":{"match_info":{"roster_3":"{"name":"Sh4rgaas #EUNE","player_id":"2fb49e77-85c6-522c-a240-27c78a2f9a8f","character":"Pandemic","rank":0,"locked":false,"local":true,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_4":"{"name":"BreachMain #EUW","player_id":"d8b9c6f7-2cc6-5a75-825f-a5658b37eb1d","character":"Vampire","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_3":"{"name":"Sh4rgaas #EUNE","player_id":"2fb49e77-85c6-522c-a240-27c78a2f9a8f","character":"Pandemic","rank":0,"locked":true,"local":true,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_1":"{"name":"NoobaHooba #8609","player_id":"f0be482b-d182-51a7-a17b-5d5d73d2f0cc","character":"Hunter","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_0":"{"name":"TroyDarion #6170","player_id":"e70b9fb9-b64a-503e-a0ac-3bd12bcac218","character":"Gumshoe","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_1":"{"name":"NoobaHooba #8609","player_id":"f0be482b-d182-51a7-a17b-5d5d73d2f0cc","character":"Hunter","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_0":"{"name":"TroyDarion #6170","player_id":"e70b9fb9-b64a-503e-a0ac-3bd12bcac218","character":"Gumshoe","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_2":"{"name":"SoloMeoParedes #ESP","player_id":"db36fb3b-e351-5da2-b0e3-c3a0400e8ddd","character":"Thorne","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_2":"{"name":"SoloMeoParedes #ESP","player_id":"db36fb3b-e351-5da2-b0e3-c3a0400e8ddd","character":"Thorne","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_6":"{"name":"zayed2 #EUW","player_id":"4d5efc43-b001-5c47-81d2-2f3cacff5ac7","character":"Wraith","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_7":"{"name":"maheralkurdy #7836","player_id":"2080a484-c481-5362-812c-7572f5182b10","character":"Wushu","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_5":"{"name":"Kubix11223 #5713","player_id":"dafa74b0-80ad-5dba-a753-70318f91d80a","character":"Thorne","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_9":"{"name":"ImJOWY #2905","player_id":"162ec3aa-0114-554e-839f-fbe276467ece","character":"Clay","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_8":"{"name":"kot #8059","player_id":"4d7d329c-efc4-5400-9910-2a6b76f13c7b","character":"Phoenix","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+```
+
+#### *scoreboard* note
+
+List of parameters: 
+* player_id - the id of the player
+* name - the player's name
+* character - the character's name
+* teammate - is the player in my team or not
+* team - 0/1 - team 0 will always start on attack and team 1 will always start on defense. The team IDs will not change after switching sides 
+* kills / deaths / assists - The number of kills, deaths and assists during the game 
+* money - the amount of money during the game for each player
+* is_local - local player or not (Boolean)
+* alive - if the player is alive true/false
+* shield - the currently used shield for the local and teammate players. Possible values are 0 - no shield, 1 - light shield (25), 2 - heavy shield (50)
+* weapon - the current primary weapon (loadout) name used by the local and teammate players. Visible to all players in a deathmatch like the behavior in the scoreboard during the game. 
+* spike - is the player carrying the spike or not (Boolean) - only available for teammates
+* ult_points / ult_max - the current ultimate point out of the maximum ultimate points
+
+<details open>
+<summary>List of available weapons</summary>
+
+Pistols:
+
+TX_Hud_Pistol_Classic = Classic
+
+TX_Hud_Pistol_Slim = Shorty
+
+TX_Hud_Pistol_AutoPistol = Frenzy
+
+TX_Hud_Pistol_Luger = Ghost
+
+TX_Hud_Pistol_Sheriff = Sheriff
+
+Shotguns:
+
+TX_Hud_Shotguns_Pump = Bucky
+
+TX_Hud_Shotguns_Persuader = Judge
+
+SMGS:
+
+TX_Hud_SMGs_Vector = Stinger
+
+TX_Hud_SMGs_Ninja = Spectre
+
+Rifles:
+
+TX_Hud_Rifles_Burst = Bulldog
+
+TX_Hud_Rifles_DMR = Guardian
+
+TX_Hud_Rifles_Ghost = Phantom
+
+TX_Hud_Rifles_Volcano = Vandal
+
+Snipers:
+
+TX_Hud_Sniper_Bolt = Marshal
+
+TX_Hud_Sniper_Operater = Operator
+
+TX_Hud_Sniper_DoubleSniper = Outlaw
+
+Machine Guns:
+
+TX_Hud_LMG = Ares
+
+TX_Hud_HMG = Odin
+
+Knife:
+
+knife = Knife
+
+</details>
+
+Data Example:
+
+```json
+{"feature": "match_info", "category": "match_info", "key": "scoreboard_0", "data": "{\"name\":\"MrTest #1111\",\"character\":\"Sarge\",\"teammate\":true,\"team\":1,\"alive\":true,\"player_id\":\"61b608c1-1656-5c92-a34c-c18042826d0d\",\"shield\":0,\"weapon\":\"TX_Hud_Pistol_Classic\",\"spike\":true,\"ult_points\":0,\"ult_max\":8,\"kills\":11,\"deaths\":5,\"assists\":3,\"money\":1800,\"is_local\":true}"}
+```
+
+#### *kill_feed* note
+
+List of parameters: 
+* attacker - the name of the killing player
+* victim  - the name of the killed player
+* assist 1/2/3/4 - the name of the characters who assisted in the kill  
+* ult - name of the ultimate used, reserved for a nonlethal ultimate such as Sage's resurrection 
+* headshot - Boolean value if the kill was by headshot
+* weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage
+* is_attacker_teammate - true/false if the attacker is a teammate 
+* is_victim_teammate - true/false if the victim is a teammate 
+
+<details open>
+<summary>List of available weapons</summary>
+
+**Pistols:**
+
+TX_Hud_Pistol_Glock_S = Classic
+
+TX_Hud_Pistol_SawedOff_S = Shorty
+
+TX_Hud_AutoPistol = Frenzy
+
+TX_Hud_Pistol_Luger_S = Ghost
+
+TX_Hud_Pistol_Revolver_S = Sheriff
+
+**Shotguns:**
+
+TX_Hud_Pump = Bucky
+
+TX_Hud_Shotguns_Spas12_S = Judge
+
+**SMGS:**
+
+TX_Hud_Vector = Stinger
+
+TX_Hud_SMG_MP5_S = Spectre
+
+**Rifles:**
+
+TX_Hud_Burst = Bulldog
+
+tx_hud_dmr = Guardian
+
+TX_Hud_Assault_AR10A2_S = Phantom
+
+TX_Hud_Volcano = Vandal
+
+**Snipers:**
+
+TX_Hud_Sniper_BoltAction_S = Marshal
+
+TX_Hud_Operator = Operator
+
+TX_Hud_DoubleSniper = Outlaw
+
+**Machine Guns:**
+
+TX_Hud_LMG = Ares
+
+TX_Hud_HMG = Odin
+
+**Knife:**
+
+TX_Hud_Knife_Standard_S = Knife
+
+</details>
+
+<details open>
+<summary>List of available abilities </summary>
+
+**Breach:**
+
+TX_Breach_FusionBlast = Aftershock
+
+**Brimstone:**
+
+TX_Sarge_MolotovLauncher = Incendiary 
+
+TX_Sarge_OrbitalStrike = Orbital strike (ULT)
+
+**Phoenix:** 
+
+TX_Pheonix_FireWall = Blaze 
+
+TX_Pheonix_Molotov = Hot hands 
+
+**Sova:**
+
+TX_Hunter_ShockArrow - Shock bolt
+
+TX_Hunter_BowBlast - Hunters fury
+
+**Chamber:**
+
+TX_Hud_Deadeye_Q_Pistol = Headhunter 
+
+TX_Hud_Deadeye_X_GiantSlayer = Tour de force (ULT)
+
+**Deadlock:**
+
+TX_Cable_FishingHook = Annihilation (ULT)
+
+**Jett:**
+
+TX_Hud_Wushu_X_Dagger = Blade storm (ULT)
+
+**Neon:**
+
+"TX_Neon_Ult = Overdrive (ULT)
+
+**Sage:**
+
+TX_Thorne_Heal = Resurrection (ULT)
+
+**Cypher:**
+
+TX_Gumshoe_Tripwire - Trapwire
+
+**Kay/o**
+
+TX_Gren_Icon = Frag/ment
+
+**Geko: **
+
+TX_Aggrobot_Bubbles = Mosh pit
+
+**Killjoy:** 
+
+TX_KJ_Bees = Nanoswarm
+
+tx_KJ_turret = turret 
+
+**Raze:**
+
+TX_Clay_Boomba =Boom bot
+
+TX_Clay_ClusterBomb = paint shells 
+
+TX_Clay_RocketLauncher = Show stopper (ULT)
+
+**Skye:**
+
+TX_Guide4 = Trail blazer
+
+**Viper:**
+
+TX_Pandemic_AcidLauncher = Snake bite
+
+</details>
+
+Data Example:
+
+```json
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+```
+None lethal ultimate example: 
+
+```json
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+```
+
+#### *map* note
+
+This info-update is triggered before the match_start event end resets at the end of each game
+
+Possible values:
+
+* "Infinity" - Abyss map
+* "Triad" - Haven map
+* "Duality" - Bind map
+* "Bonsai" - Split map
+* "Ascent" - Ascent map
+* "Port" - Icebox map
+* "Foxtrot" - Breeze map
+* "Canyon" - Fracture map
+* "Pitt" - Pearl map
+* "Jam" - Lotus map
+* "Juliett" - Sunset map
+* "Range" - Practice Range map
+* "HURM_Alley" - District map
+* "HURM_Yard" - Piazza map
+* "HURM_Bowl" - Kasbah map
+* "HURM_Helix" - Drift map
+
+Data Example:
+
+```json
+{"info":{"match_info":{"map":"Foxtrot"}},"feature":"match_info"}
+```
+#### *escalation_stage* note
+
+```json
+{"feature": "match_info", "category": "match_info", "key": "escalation_stage", "data": "{\"attacker\":1,\"defender\":2}"} 
+```
+
+#### *observing* note
+
+```json
+{"feature": "match_info", "category": "match_info", "key": "observing", "data": "MrTester #5555"} 
+```
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+match_start | null         | Match started. | See [notes](#match_start-note) | 148.0  |
+match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148.0  |
+spike_planted   | null         | When a spike is planted.   | See [notes](#spike_planted-note) | 233.0  |
+spike_defused   | null         | When a spike is defused.   | See [notes](#spike_defused-note) | 233.0  |
+spike_detonated   | null         | When a spike is detonated.   | See [notes](#spike_detonated-note) | 233.0  |
+kill_feed   | kill feed details         | When a kill feed appears in the UI.   | See [notes](#kill_feed-note) | 237.0  |
+shop    | open/close  | When the shop window is open or close |See [notes](#shop-note)|   241.0       |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name": "match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Please note that `match_end` does not work on custom matches or training.
+
+Data Example:
+
+```json
+{"events":[{"name": "match_end","data":""}]}
+```
+
+#### *spike_planted* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_planted","data":""}]}
+```
+
+#### *spike_defused* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_defused","data":""}]}
+```
+
+#### *spike_detonated* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_detonated","data":""}]}
+```
+
+#### *kill_feed* note
+
+List of parameters: 
+* attacker - the name of the killing player
+* victim  - the name of the killed player
+* assist 1/2/3/4 - the name of the characters who assisted in the kill  
+* ult - name of the ultimate used, reserved for a non-lethal ultimate such as Sage's resurrection 
+* headshot - Boolean value if the kill was by headshot
+* weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage
+* is_attacker_teammate - true/false if the attacker is a teammate 
+* is_victim_teammate - true/false if the victim is a teammate 
+
+Data Example:
+
+```json
+{"events":[{"name": "kill_feed","data":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}}]}
+```
+
+#### *shop* note
+
+* This feature is not yet supported in TTM game mode
+
+Data Example:
+
+```json
+{"events":[{"name": "shop","data":"open"}]}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene        | game_info   | The current scene-state.   |See [notes](#scene-note)|   148.0       |
+state        | game_info   | The current game-state.   |See [notes](#state-note)|   148.0       |
+
+#### *scene* note
+
+"Scene" info includes the scenes of the game and the name of the map that is currently played (like in the example down below - Triad).
+
+Data Example:
+
+```json
+{"info":{"game_info":{"scene":"Triad"}},"feature":"game_info"}
+```
+Possible Scene values:
+
+* "MainMenu" - Main menu
+* "Triad" - Haven map
+* "Duality" - Bind map
+* "Bonsai" - Split map
+* "Ascent" - Ascent map
+* "Port" - Icebox map
+* "Foxtrot" - Breeze map
+* "Canyon" - Fracture map
+* "Pitt" - Pearl map
+* "Range" - Practice Range map
+* "CharacterSelectPersistentLevel" - Character Selection
+
+
+#### *state* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"state":"WaitingToStart"}},"feature":"game_info"}
+{"info":{"game_info":{"state":"InProgress"}},"feature":"game_info"}
+```
+
+Possible states:
+* "WaitingToStart"
+* "LeavingMap"
+* "Aborted"
+* "InProgress"
+* "Init"
+
+## `kill`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+kills         | kill        | Amount of kills performed by the local player. |See [notes](#kill-note)|   148.0       |
+assists       | kill        | Amount of assists performed by the local player. |See [notes](#assist-note)|   148.0  |
+headshots     | kill   | Amount of headshots performed by the local player. |See [notes](#headshots-note)|   150.0  |
+
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"info":{"kill":{"kills":1}},"feature":"kill"}
+{"info":{"kill":{"kills":2}},"feature":"kill"}
+{"info":{"kill":{"kills":3}},"feature":"kill"}
+```
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"info":{"kill":{"assists":1}},"feature":"kill"}
+```
+
+#### *headshots* note
+
+Data Example:
+
+```json
+{"info":{"kill":{"headshots":1}},"feature":"kill"}
+```
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+kill        | Total kills  | Kill is performed. | See [notes](#kill-note) | 148.0  |
+assist      | Total assists| Assist is performed. | See [notes](#assist-note) | 148.0  |
+headshot    | Total headshots| Headshot is performed. | See [notes](#headshot-note) | 150.0  |
+
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":6}]}
+```
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":1}]}
+```
+
+#### *headshot* note
+
+Data Example:
+
+```json
+{"events":[{"name":"headshot","data":"1"}]}
+```
+
+## `death`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+deaths       | death       | Amount of deaths by the local player. |See [notes](#death-note)|   148.0       |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"info":{"death":{"deaths":1}},"feature":"death"}
+```
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+death       | Total deaths | Local player died. | See [notes](#death-note) | 148.0  |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":14}]}
+```

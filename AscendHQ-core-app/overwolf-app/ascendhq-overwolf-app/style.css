@@ -1,0 +1,231 @@
+/* General Styles */
+:root {
+    --primary-color: #7d42f4;
+    --secondary-color: #42b4f4;
+    --dark-bg: #121212;
+    --medium-bg: #1f1f1f;
+    --light-bg: #2a2a2a;
+    --text-color: #f0f0f0;
+    --highlight-color: #e642f4;
+    --success-color: #42f47d;
+    --error-color: #f44242;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* App Container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--medium-bg);
+    padding: 10px 15px;
+    -webkit-app-region: drag; /* Makes header draggable */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-controls {
+    -webkit-app-region: no-drag; /* Prevents buttons from inheriting drag behavior */
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.control-button:hover {
+    background-color: var(--light-bg);
+}
+
+/* Main Content */
+.app-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: var(--dark-bg);
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--medium-bg);
+    border-radius: 8px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.primary-button {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.status-message {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.status-message.success {
+    background-color: rgba(66, 244, 125, 0.2);
+    color: var(--success-color);
+}
+
+.status-message.error {
+    background-color: rgba(244, 66, 66, 0.2);
+    color: var(--error-color);
+}
+
+/* Game Stats */
+.game-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: var(--light-bg);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.stat-content {
+    font-size: 14px;
+}
+
+.chart-container {
+    background-color: var(--light-bg);
+    border-radius: 6px;
+    padding: 15px;
+    height: 250px;
+}
+
+/* Footer */
+.app-footer {
+    background-color: var(--medium-bg);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Event List Styles */
+.events-list {
+    list-style: none;
+}
+
+.events-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--medium-bg);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+}
+
+.event-time {
+    font-size: 12px;
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.event-type {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.event-details {
+    font-size: 12px;
+    color: #ddd;
+    width: 100%;
+    margin-top: 3px;
+}
+
+/* Stat Row Styles */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.stat-label {
+    color: #aaa;
+}
+
+.stat-value {
+    font-weight: bold;
+}

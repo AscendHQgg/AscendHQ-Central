@@ -1,0 +1,63 @@
+﻿{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "AscendHQ",
+    "author": "AscendHQ",
+    "version": "0.1.0",
+    "minimum-overwolf-version": "0.198.0",
+    "description": "AI-driven predictive analytics and coaching platform for esports and competitive gaming",
+    "dock_button_title": "AscendHQ",
+    "icon": "icon.png",
+    "icon_gray": "icon_gray.png",
+    "window_icon": "icon.png",
+    "launcher_icon": "launcher.png"
+  },
+  "permissions": [
+    "GameInfo",
+    "GameEvents",
+    "Extensions",
+    "Hotkeys",
+    "Profile",
+    "Streaming"
+  ],
+  "data": {
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [21816]
+    },
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [21816]
+        },
+        "start_minimized": false
+      }
+    ],
+    "game_events": [21816],
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "background.html",
+        "is_background_page": true
+      },
+      "in_game": {
+        "file": "in_game.html",
+        "desktop_only": false,
+        "native_window": true,
+        "transparent": true,
+        "show_in_taskbar": false,
+        "resizable": true,
+        "size": {
+          "width": 800,
+          "height": 600
+        },
+        "start_position": {
+          "top": 100,
+          "left": 100
+        }
+      }
+    }
+  }
+}

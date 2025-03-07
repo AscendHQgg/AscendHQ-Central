@@ -1,0 +1,27 @@
+.image-heading {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0 24px;
+    align-items: center;
+
+    img {
+      margin: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      p {
+        color: var(--color-text-quaternary);
+        margin: 0;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: var(--font-size-600);
+        line-height: var(--font-line-height-700);
+        margin: 0;
+      }
+    }
+}

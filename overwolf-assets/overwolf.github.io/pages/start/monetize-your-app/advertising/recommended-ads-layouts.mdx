@@ -1,0 +1,121 @@
+---
+id: recommended-ads-layouts
+image: "/img/embed/getting-started.jpg"
+title: Recommended Ads Layouts
+sidebar_position: 100
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/guides/monetize-your-app/advertising/recommended-ads-layouts/" />
+
+import AdsLayoutRow from '@site/../src/components/start/monetize-your-app/advertising/ads-layout-row';
+
+Planning your app layout with ads can present challenges, particularly due to the wide array of ad [sizes](working-with-ads#list-of-ad-sizes) available.
+
+To simplify this process, we have curated a list of recommended and optimized ad container combinations/layouts. These recommendations consider various factors and aim to maximize advertisers' key performance indicators. Each layout is accompanied by a short summary and a rough estimate of potential revenue performance*.
+
+*\* Revenue estimates are generated based on aggregated performance data across the entire platform, across many countries and configurations.*
+
+:::tip Can't find the right layout for your case?
+Try to pick a few you like, and see why they work. Combine, experiment, and most importantly, get feedback from others. We are [always here](/support/contact-us) for
+any questions you may have!
+:::
+
+
+<ImageHeading
+  title={'All Windows'}
+  imgDarkSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/window.svg'}
+  imgLightSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/window-light.svg'}
+  id={'all-windows'}
+>
+
+The following is a list of recommended Ad layouts for your different App windows.
+
+</ImageHeading>
+
+<OWTable headerCellNames={['Layout', 'Revenue Est. ($)', 'Overview']}>
+  <AdsLayoutRow 
+    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-large'
+    name='Tall Duo'
+    revenueBenchmark='$$$$$'
+    overview={
+      {
+        description: 'A simple, two large split Containers layout',
+        dimensions: '400x600 + 160x600',
+        multipleAds: true,
+        adsFormats: 'Video, Display'
+      }
+    }
+    tabs= {
+      [ 'Split Right Aligned', 'Split Left Aligned' ]
+    }
+  />
+  <AdsLayoutRow 
+    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-split2'
+    name='Combo Classic'
+    revenueBenchmark='$$$$$'
+    overview={
+      {
+        description: 'A simple, split two Containers layout',
+        dimensions: '400x600 + 300x250',
+        adsFormats: 'Video, Display'
+      }
+    }
+    tabs= {
+      [ 'Split Left', 'Split Right' ]
+    }
+  />
+  <AdsLayoutRow 
+    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-split'
+    name='Studio Tower'
+    revenueBenchmark='$$$$'
+    overview={
+      {
+        description: 'A simple, split two Containers layout',
+         dimensions: '400x300 + 160x600',
+        adsFormats: 'Video, Display'
+      }
+    }
+    tabs= {
+      [ 'Right Aligned', 'Left Aligned' ]
+    }
+  />
+  <AdsLayoutRow 
+    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-large'
+    name='Tower'
+    revenueBenchmark='$$$$'
+    overview={
+      {
+        description: 'A simple, one large Container layout',
+        dimensions: '400x600',
+        multipleAds: true,
+        adsFormats: 'Video, Display'
+      }
+    }
+    tabs= {
+      [ 'Split Left', 'Split Right' ]
+    }
+  />
+  <AdsLayoutRow 
+    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-medium'
+    name='Studio'
+    revenueBenchmark='$$$'
+    overview={
+      {
+        description: 'A simple, one Container layout',
+        dimensions: '400x300',
+        adsFormats: 'Video, Display'
+      }
+    }
+    tabs= {
+      [
+        'Bottom Right', 'Bottom Left', 'Top Left', 'Top Right'
+      ]
+    }
+  />
+</OWTable>
+
+*\*\* One or more Containers in this layout may contain multiple Ads at once, based on real-time optimization.*

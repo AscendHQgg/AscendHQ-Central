@@ -1,0 +1,4 @@
+label: 'Electron'
+customProps:
+  category:
+    id: electron

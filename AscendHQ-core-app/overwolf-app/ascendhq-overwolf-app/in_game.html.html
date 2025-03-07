@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AscendHQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <img src="img/ascend-logo.png" alt="AscendHQ Logo">
+                <h1>AscendHQ</h1>
+            </div>
+            <div class="header-controls">
+                <button id="minimizeButton" class="control-button">_</button>
+                <button id="closeButton" class="control-button">✕</button>
+            </div>
+        </header>
+
+        <main class="app-content">
+            <div id="loginSection" class="section">
+                <h2>Login to AscendHQ</h2>
+                <button id="loginButton" class="primary-button">Login with Overwolf</button>
+                <div id="loginStatus" class="status-message"></div>
+            </div>
+
+            <div id="gameDataSection" class="section hidden">
+                <h2>Marvel Rivals Analytics</h2>
+                <div class="game-stats">
+                    <div class="stat-card">
+                        <h3>Performance</h3>
+                        <div id="performanceStats" class="stat-content">
+                            <p>Waiting for game data...</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Recent Events</h3>
+                        <div id="gameEvents" class="stat-content">
+                            <p>Waiting for game events...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>AscendHQ v0.1.0 - AI-Powered Gaming Analytics</p>
+        </footer>
+    </div>
+
+    <!-- Load Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <!-- Load app logic -->
+    <script src="js/in_game.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+label: 'Overwolf Installer'
+customProps:
+  category:
+    id: 'utilities'

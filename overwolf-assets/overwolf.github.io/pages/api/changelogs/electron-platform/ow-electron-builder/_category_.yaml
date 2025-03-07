@@ -1,0 +1,7 @@
+label: 'ow-electron-builder'
+collapsed: false
+customProps:
+  sort:
+    main: numerically
+    reverse: false
+    strict: true

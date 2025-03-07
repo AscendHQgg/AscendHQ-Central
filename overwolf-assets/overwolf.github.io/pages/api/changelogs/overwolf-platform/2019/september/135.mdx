@@ -1,0 +1,21 @@
+---
+id: 135
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.135"
+sidebar_label: "0.135"
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/getting-started/changelog/ow-changelog" />
+
+* [CS: GO game events](/api/live-game-data/deprecated/counter-strike-global-offensive#docsNav)
+  * New update:
+    * phase
+* New properties for the [GameInfo](/api/games#gameinfo-object) object:
+  * monitorHandle - Returns the current monitor handle. You can now check for example, on which monitor your app is running.
+  * windowHandle - Returns the current app window handle.
+* New function: [overwolf.extensions.checkForExtensionUpdate()](/api/extensions#checkforextensionupdatecallback) -  allows the current app to check if there is an extension update.
+
